@@ -54,11 +54,6 @@ class HomeView extends LitElement {
           border-bottom: 1px solid #59868c;
         }
 
-        section {
-          width: 100%;
-          background-color: rgb(71, 87, 87);
-        }
-
         footer {
           background-color: var(--header-background);
         }
@@ -75,7 +70,24 @@ class HomeView extends LitElement {
           height: 100%;
         }
 
+        .technologies {
+          background-color: var(--nav-background);
+        }
+
+        .technologies > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 300px;
+        }
+
         @media (min-width: 768px) {
+          .technologies {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: var(--nav-background);
+          }
+
           .column {
             position: absolute;
             top: 0;
@@ -110,8 +122,10 @@ class HomeView extends LitElement {
         <div class="column"></div>
         <div class="column right"></div>
       </main>
-      <section>
-        <h2>Section</h2>
+      <section class="technologies">
+        <div>Section 1</div>
+        <div>Section 2</div>
+        <div>Section 3</div>
       </section>
       <footer>
         Footer
