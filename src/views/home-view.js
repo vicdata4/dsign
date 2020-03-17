@@ -6,29 +6,42 @@ class HomeView extends LitElement {
     return [
       css`
         :host {
+          --header-height: 120px;
+          --nav-height: 50px;
+          --main-height: calc(100% - (var(--header-height) + var(--nav-height)));
+          --section-height: auto;
+          --footer-height: 300px;
+
+          --nav-background: rgba(0, 0, 0, 0.07);
+          --header-background: rgb(50, 50, 50);
+
+          font-family: 'Sen', sans-serif;
           display: grid;
           position: relative;
-          grid-template-rows: 120px 50px 1fr;
+          grid-template-rows:
+            var(--header-height)
+            var(--nav-height)
+            var(--main-height)
+            var(--section-height)
+            var(--footer-height);
+
           width: 100%;
           height: 100%;
-          /* overflow: hidden; */
-          font-family: 'Sen', sans-serif;
         }
 
         header {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: rgb(50, 50, 50);
-          color: #fff;
+          background-color: var(--header-background);
         }
 
         nav {
-          background-color: rgba(0, 0, 0, 0.07);
           display: flex;
+          flex-flow: row wrap;
           justify-content: center;
           align-items: center;
-          flex-flow: row wrap;
+          background-color: var(--nav-background);
         }
 
         nav > a {
@@ -41,27 +54,34 @@ class HomeView extends LitElement {
           border-bottom: 1px solid #59868c;
         }
 
+        section {
+          width: 100%;
+          background-color: rgb(71, 87, 87);
+        }
+
+        footer {
+          background-color: var(--header-background);
+        }
+
         .logo {
-          width:115px;
+          width: 115px;
           height: auto;
         }
 
         cube-component {
           display: flex;
           justify-content: center;
-          margin-top: 200px;
-        }
-
-        h5 {
-          height: 1000px;
+          align-items: center;
+          height: 100%;
         }
 
         @media (min-width: 768px) {
           .column {
             position: absolute;
+            top: 0;
             width: 150px;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.07);
+            background-color: var(--nav-background);
           }
 
           .right {
@@ -70,15 +90,6 @@ class HomeView extends LitElement {
         }
       `
     ];
-  }
-
-  static get properties() {
-    return {
-    };
-  }
-
-  constructor() {
-    super();
   }
 
   render() {
@@ -94,10 +105,17 @@ class HomeView extends LitElement {
         <a href="#">Antarctica</a>
         <a href="#">Oceania</a>
       </nav>
-      <div class="column"></div>
-      <div class="column right"></div>
-      <cube-component></cube-component>
-      <h5></h5>
+      <main>
+        <cube-component></cube-component>
+        <div class="column"></div>
+        <div class="column right"></div>
+      </main>
+      <section>
+        <h2>Section</h2>
+      </section>
+      <footer>
+        Footer
+      </footer>
  
     `;
   }
