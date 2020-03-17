@@ -71,7 +71,10 @@ class HomeView extends LitElement {
         }
 
         .technologies {
-          background-color: var(--nav-background);
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 2px;
+            row-gap: 2px;
         }
 
         .technologies > div {
@@ -79,13 +82,12 @@ class HomeView extends LitElement {
           justify-content: center;
           align-items: center;
           height: 300px;
+          background-color: var(--nav-background);
         }
 
         @media (min-width: 768px) {
           .technologies {
-            display: grid;
             grid-template-columns: repeat(3, 1fr);
-            background-color: var(--nav-background);
           }
 
           .column {
