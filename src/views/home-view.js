@@ -9,7 +9,8 @@ class HomeView extends LitElement {
           --header-height: 120px;
           --nav-height: 50px;
           --main-height: calc(100% - (var(--header-height) + var(--nav-height)));
-          --section-height: auto;
+          --technologies-height: auto;
+          --information-height: 200px;
           --footer-height: 300px;
 
           --nav-background: rgba(0, 0, 0, 0.07);
@@ -22,7 +23,8 @@ class HomeView extends LitElement {
             var(--header-height)
             var(--nav-height)
             var(--main-height)
-            var(--section-height)
+            var(--technologies-height)
+            var(--information-height)
             var(--footer-height);
 
           width: 100%;
@@ -75,19 +77,51 @@ class HomeView extends LitElement {
             grid-template-columns: 1fr;
             column-gap: 2px;
             row-gap: 2px;
+            padding: 0 15px 0 15px;
         }
 
-        .technologies > div {
+        .technologies > .card {
           display: flex;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
-          height: 300px;
+          padding: 30px;
+          height: auto;
           background-color: var(--nav-background);
+        }
+
+        .card-text {
+          text-align: center;
+          font-size: 14px;
+          letter-spacing: .5px;
+        }
+
+        .separator {
+          border-color: #dc6260;
+          width: 50px;
+          margin: 0;
+        }
+
+        .separator.blue {
+          border-color: #60c8dc;
+        }
+
+        .separator.green {
+          border-color: #c0dc60;
         }
 
         @media (min-width: 768px) {
           .technologies {
             grid-template-columns: repeat(3, 1fr);
+            padding: 0;
+          }
+
+          .technologies > .card {
+            min-height: 200px;
+          }
+
+          .card-text {
+            font-size: 14.5px;
           }
 
           .column {
@@ -125,9 +159,24 @@ class HomeView extends LitElement {
         <div class="column right"></div>
       </main>
       <section class="technologies">
-        <div>Section 1</div>
-        <div>Section 2</div>
-        <div>Section 3</div>
+        <div class="card">
+          <h3>HTML5</h3>
+          <hr class="separator">
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum tortor accumsan, malesuada ligula eu, efficitur massa.</p>
+        </div>
+        <div class="card">
+          <h3>CSS3</h3>
+          <hr class="separator blue">
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum tortor accumsan, malesuada ligula eu, efficitur massa.</p>
+        </div>
+        <div class="card">
+          <h3>Javascript</h3>
+          <hr class="separator green">
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum tortor accumsan, malesuada ligula eu, efficitur massa.</p>
+        </div>
+      </section>
+      <section class="information">
+        Section 4
       </section>
       <footer>
         Footer
