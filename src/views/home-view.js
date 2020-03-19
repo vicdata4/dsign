@@ -1,7 +1,8 @@
 import { LitElement, html, css } from 'lit-element';
+
 import { material } from '../utils/fonts'
+import { html5_svg, css3_svg, js_svg } from '../utils/icons';
 import '../components/cube-component';
-import { html5, css3, js } from '../utils/icons';
 
 class HomeView extends LitElement {
   static get styles() {
@@ -97,6 +98,7 @@ class HomeView extends LitElement {
           text-align: center;
           font-size: 14px;
           letter-spacing: .5px;
+          line-height: 21px;
         }
 
         .separator {
@@ -230,22 +232,19 @@ class HomeView extends LitElement {
       </main>
       <section class="technologies">
         <div class="card">
-          ${html5}
-          <!-- <h2>HTML5</h2>
-          <hr class="separator sm red"> -->
+          ${html5_svg}
           <p class="card-text"><span class="card-decorator">HTML5</span> is a software solution stack that defines the properties and behaviors of web page content by implementing a <span class="card-decorator">markup-based pattern</span> to it</p>
+          <hr class="separator sm red">
         </div>
         <div class="card">
-          ${css3}
-          <!-- <h2>CSS3</h2>
-          <hr class="separator sm blue"> -->
+          ${css3_svg}
           <p class="card-text"><span class="card-decorator">Cascading Style Sheets</span> (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.</p>
+          <hr class="separator sm blue">
         </div>
         <div class="card">
-          ${js}
-          <!-- <h2>Javascript</h2>
-          <hr class="separator sm green"> -->
+          ${js_svg}
           <p class="card-text"><span class="card-decorator">JavaScript</span>, often abbreviated as JS, is a programming language that conforms to the <span class="card-decorator">ECMAScript specification</span>. JavaScript is high-level, often just-in-time compiled, and multi-paradigm.</p>
+          <hr class="separator sm green">
         </div>
       </section>
       <section class="information">
