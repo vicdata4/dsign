@@ -161,6 +161,11 @@ class HomeView extends LitElement {
           color: #5e5ea5;
         }
 
+        .card-decorator {
+          color: #066e8e;
+          font-weight: bolder;
+        }
+
         svg {
           width: 150px;
         }
@@ -228,19 +233,19 @@ class HomeView extends LitElement {
           ${html5}
           <!-- <h2>HTML5</h2>
           <hr class="separator sm red"> -->
-          <p class="card-text">HTML5 is a software solution stack that defines the properties and behaviors of web page content by implementing a markup-based pattern to it</p>
+          <p class="card-text"><span class="card-decorator">HTML5</span> is a software solution stack that defines the properties and behaviors of web page content by implementing a <span class="card-decorator">markup-based pattern</span> to it</p>
         </div>
         <div class="card">
           ${css3}
           <!-- <h2>CSS3</h2>
           <hr class="separator sm blue"> -->
-          <p class="card-text">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.</p>
+          <p class="card-text"><span class="card-decorator">Cascading Style Sheets</span> (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.</p>
         </div>
         <div class="card">
           ${js}
           <!-- <h2>Javascript</h2>
           <hr class="separator sm green"> -->
-          <p class="card-text">JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm.</p>
+          <p class="card-text"><span class="card-decorator">JavaScript</span>, often abbreviated as JS, is a programming language that conforms to the <span class="card-decorator">ECMAScript specification</span>. JavaScript is high-level, often just-in-time compiled, and multi-paradigm.</p>
         </div>
       </section>
       <section class="information">
