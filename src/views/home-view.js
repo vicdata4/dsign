@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 import { material } from '../utils/fonts'
 import '../components/cube-component';
+import { html5, css3, js } from '../utils/icons';
 
 class HomeView extends LitElement {
   static get styles() {
@@ -106,18 +107,20 @@ class HomeView extends LitElement {
           border-top-right-radius: 100%;
         }
 
+        .separator.sm {
+          width: 80px;
+          border-bottom-width: 1.4px;
+        }
+
         .separator.red {
-          width: 50px;
           border-bottom-color: #dc6260;
         }
 
         .separator.blue {
-          width: 50px;
           border-bottom-color: #60c8dc;
         }
 
         .separator.green {
-          width: 50px;
           border-bottom-color: #c0dc60;
         }
 
@@ -125,6 +128,7 @@ class HomeView extends LitElement {
           width: 300px;
           align-self: center;
           margin: 30px 0px;
+          border-bottom-width: 2px;
         }
 
         .information {
@@ -149,6 +153,28 @@ class HomeView extends LitElement {
           font-size: 30px;
         }
 
+        .favourite-red {
+          color: #ca6b33;
+        }
+
+        .share-purple {
+          color: #5e5ea5;
+        }
+
+        svg {
+          width: 150px;
+        }
+
+        @media (min-width: 414px) {
+          .card-text {
+            font-size: 16px;
+          }
+
+          .info-text {
+            font-size: 18px;
+          }
+        }
+
         @media (min-width: 768px) {
           .technologies {
             grid-template-columns: repeat(3, 1fr);
@@ -159,16 +185,8 @@ class HomeView extends LitElement {
             min-height: 200px;
           }
 
-          .card-text {
-            font-size: 14.5px;
-          }
-
           .information {
             padding: 50px 20%;
-          }
-
-          .info-text {
-            font-size: 18px;
           }
 
           .column {
@@ -207,30 +225,33 @@ class HomeView extends LitElement {
       </main>
       <section class="technologies">
         <div class="card">
-          <h3>HTML5</h3>
-          <hr class="separator red">
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum tortor accumsan, malesuada ligula eu, efficitur massa.</p>
+          ${html5}
+          <!-- <h2>HTML5</h2>
+          <hr class="separator sm red"> -->
+          <p class="card-text">HTML5 is a software solution stack that defines the properties and behaviors of web page content by implementing a markup-based pattern to it</p>
         </div>
         <div class="card">
-          <h3>CSS3</h3>
-          <hr class="separator blue">
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum tortor accumsan, malesuada ligula eu, efficitur massa.</p>
+          ${css3}
+          <!-- <h2>CSS3</h2>
+          <hr class="separator sm blue"> -->
+          <p class="card-text">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.</p>
         </div>
         <div class="card">
-          <h3>Javascript</h3>
-          <hr class="separator green">
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum tortor accumsan, malesuada ligula eu, efficitur massa.</p>
+          ${js}
+          <!-- <h2>Javascript</h2>
+          <hr class="separator sm green"> -->
+          <p class="card-text">JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm.</p>
         </div>
       </section>
       <section class="information">
           <div class="info-header">
-            <h3>Lorem ipsum</h3>
+            <h2>Lorem ipsum</h2>
             <div class="icons">
-              <i class="material-icons">favorite_border</i>
-              <i class="material-icons">share</i>
+              <i class="material-icons favourite-red">favorite_border</i>
+              <i class="material-icons share-purple">share</i>
             </div>
           </div>
-          <hr class="separator green">
+          <hr class="separator sm green">
           <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in dolor at diam sagittis blandit in ac nulla. Pellentesque tristique tellus orci, a tincidunt quam sagittis at. Maecenas ac ultricies diam. Maecenas quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec tristique ipsum purus sed neque. Donec quis convallis tellus, et fringilla purus. Curabitur condimentum lacus id massa placerat, ac facilisis quam tempus. Sed id dignissim est.</p>
           <hr class="separator centered">
       </section>
