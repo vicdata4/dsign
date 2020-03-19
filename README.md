@@ -7,7 +7,7 @@ Web design project which includes different responsive web layouts following bes
 ### Layouts
 
 - [Africa]()
-- [Europa]()
+- [Europe]()
 - [Asia]()
 - [America]()
 - [Antarctica]()

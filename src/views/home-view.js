@@ -1,16 +1,18 @@
 import { LitElement, html, css } from 'lit-element';
+import { material } from '../utils/fonts'
 import '../components/cube-component';
 
 class HomeView extends LitElement {
   static get styles() {
     return [
+      material,
       css`
         :host {
           --header-height: 120px;
           --nav-height: 50px;
           --main-height: calc(100% - (var(--header-height) + var(--nav-height)));
           --technologies-height: auto;
-          --information-height: 200px;
+          --information-height: auto;
           --footer-height: 300px;
 
           --nav-background: rgba(0, 0, 0, 0.07);
@@ -110,6 +112,17 @@ class HomeView extends LitElement {
           border-color: #c0dc60;
         }
 
+        .information {
+          display: flex;
+          flex-direction: column;
+          padding: 50px 40px;
+        }
+
+        .info-text {
+          color: #232323;
+          font-size: 16px;
+        }
+
         @media (min-width: 768px) {
           .technologies {
             grid-template-columns: repeat(3, 1fr);
@@ -122,6 +135,14 @@ class HomeView extends LitElement {
 
           .card-text {
             font-size: 14.5px;
+          }
+
+          .information {
+            padding: 50px 20%;
+          }
+
+          .info-text {
+            font-size: 18px;
           }
 
           .column {
@@ -176,12 +197,14 @@ class HomeView extends LitElement {
         </div>
       </section>
       <section class="information">
-        Section 4
+          <h3>Lorem ipsum</h3>
+          <hr class="separator green">
+          <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in dolor at diam sagittis blandit in ac nulla. Pellentesque tristique tellus orci, a tincidunt quam sagittis at. Maecenas ac ultricies diam. Maecenas quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec tristique ipsum purus sed neque. Donec quis convallis tellus, et fringilla purus. Curabitur condimentum lacus id massa placerat, ac facilisis quam tempus. Sed id dignissim est.</p>
+          <i class="material-icons">face</i>
       </section>
       <footer>
         Footer
       </footer>
- 
     `;
   }
 }
