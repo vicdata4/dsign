@@ -99,17 +99,32 @@ class HomeView extends LitElement {
         }
 
         .separator {
-          border-color: #dc6260;
-          width: 50px;
           margin: 0;
+          border: 0;
+          border-bottom: 1px solid #b9b7b7;
+          border-bottom-left-radius: 100%;
+          border-top-right-radius: 100%;
+        }
+
+        .separator.red {
+          width: 50px;
+          border-bottom-color: #dc6260;
         }
 
         .separator.blue {
-          border-color: #60c8dc;
+          width: 50px;
+          border-bottom-color: #60c8dc;
         }
 
         .separator.green {
-          border-color: #c0dc60;
+          width: 50px;
+          border-bottom-color: #c0dc60;
+        }
+
+        .separator.centered {
+          width: 300px;
+          align-self: center;
+          margin: 30px 0px;
         }
 
         .information {
@@ -121,6 +136,17 @@ class HomeView extends LitElement {
         .info-text {
           color: #232323;
           font-size: 16px;
+        }
+
+        .info-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .icons > i {
+          margin: 0 5px;
+          font-size: 30px;
         }
 
         @media (min-width: 768px) {
@@ -182,7 +208,7 @@ class HomeView extends LitElement {
       <section class="technologies">
         <div class="card">
           <h3>HTML5</h3>
-          <hr class="separator">
+          <hr class="separator red">
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum tortor accumsan, malesuada ligula eu, efficitur massa.</p>
         </div>
         <div class="card">
@@ -197,10 +223,16 @@ class HomeView extends LitElement {
         </div>
       </section>
       <section class="information">
-          <h3>Lorem ipsum</h3>
+          <div class="info-header">
+            <h3>Lorem ipsum</h3>
+            <div class="icons">
+              <i class="material-icons">favorite_border</i>
+              <i class="material-icons">share</i>
+            </div>
+          </div>
           <hr class="separator green">
           <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in dolor at diam sagittis blandit in ac nulla. Pellentesque tristique tellus orci, a tincidunt quam sagittis at. Maecenas ac ultricies diam. Maecenas quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec tristique ipsum purus sed neque. Donec quis convallis tellus, et fringilla purus. Curabitur condimentum lacus id massa placerat, ac facilisis quam tempus. Sed id dignissim est.</p>
-          <i class="material-icons">face</i>
+          <hr class="separator centered">
       </section>
       <footer>
         Footer
