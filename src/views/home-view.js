@@ -169,7 +169,7 @@ class HomeView extends LitElement {
         }
 
         svg {
-          width: 150px;
+          width: 130px;
         }
 
         @media (min-width: 414px) {
@@ -249,7 +249,7 @@ class HomeView extends LitElement {
       </section>
       <section class="information">
           <div class="info-header">
-            <h2>Lorem ipsum</h2>
+            <h2>Dsign project</h2>
             <div class="icons">
               <i class="material-icons favourite-red">favorite_border</i>
               <i class="material-icons share-purple">share</i>
