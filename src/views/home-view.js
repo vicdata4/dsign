@@ -46,22 +46,7 @@ class HomeView extends LitElement {
           background-color: var(--nav-background);
         }
 
-        .nav-list {
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: center;
-          align-items: center;
-          list-style: none;
-        }
-
-        .nav-list > li {
-          margin: 0 15px 0 15px;
-        }
-
-        .nav-link {
-          color: #424242;
-          text-decoration: none;
-        }
+        
 
         .nav-link:hover {
           border-bottom: 1px solid #59868c;
@@ -179,6 +164,52 @@ class HomeView extends LitElement {
           width: 130px;
         }
 
+        .menu-btn {
+          width: 100%;
+          height: 100%;
+          border: none;
+          background: transparent;
+          cursor: pointer;
+        }
+
+        .menu-btn > i {
+          font-size: 40px;
+          color: #716a6f;
+        }
+
+        .nav-list {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          position: absolute;
+          top: calc(var(--header-height) + var(--nav-height));
+          width: 100%;
+          height: 0;
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+
+          list-style: none;
+          background-color: rgba(0,0,0,.9);
+          z-index: 1;
+        }
+
+        .opened {
+          transition: height 1s ease;
+          height: var(--main-height);
+        }
+
+        .nav-list > li {
+          margin: 20px 0;
+        }
+
+        .nav-link {
+          text-decoration: none;
+          color: #fff;
+        }
+
         @media (min-width: 414px) {
           .card-text {
             font-size: 16px;
@@ -189,7 +220,34 @@ class HomeView extends LitElement {
           }
         }
 
+        @media (min-width: 600px) {
+          
+        }
+
         @media (min-width: 768px) {
+
+          .nav-list {
+            all: unset;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            list-style: none;
+          }
+
+          .nav-list > li {
+            margin: 0 15px 0 15px;
+          }
+
+          .nav-link {
+            color: #424242;
+          }
+
+          .menu-btn {
+            display: none;
+          }
+
           .technologies {
             grid-template-columns: repeat(3, 1fr);
             padding: 0;
@@ -219,6 +277,16 @@ class HomeView extends LitElement {
     ];
   }
 
+  mobileMenuSwitch() {
+    const mobileMenu = this.shadowRoot.querySelector('.nav-list').classList;
+
+    if (!mobileMenu.contains('opened')) {
+      mobileMenu.add('opened');
+    } else {
+      mobileMenu.remove('opened');
+    }
+  }
+
   render() {
     return html`
       <header>
@@ -233,6 +301,9 @@ class HomeView extends LitElement {
           <li><a href="#" class="nav-link">Antarctica</a></li>
           <li><a href="#" class="nav-link">Oceania</a></li>
         </ul>
+        <button type="button" class="menu-btn" @click="${this.mobileMenuSwitch}">
+          <i class="material-icons">expand_more</i>
+        </button>
       </nav>
       <main>
         <cube-component></cube-component>
