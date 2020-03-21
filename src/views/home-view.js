@@ -43,20 +43,27 @@ class HomeView extends LitElement {
         }
 
         nav {
+          background-color: var(--nav-background);
+        }
+
+        .nav-list {
           display: flex;
           flex-flow: row wrap;
           justify-content: center;
           align-items: center;
-          background-color: var(--nav-background);
+          list-style: none;
         }
 
-        nav > a {
+        .nav-list > li {
           margin: 0 15px 0 15px;
+        }
+
+        .nav-link {
           color: #424242;
           text-decoration: none;
         }
 
-        nav > a:hover {
+        .nav-link:hover {
           border-bottom: 1px solid #59868c;
         }
 
@@ -218,12 +225,14 @@ class HomeView extends LitElement {
         <img class="logo" src="assets/images/dsign_logosub.png" alt="logo">
       </header>
       <nav>
-        <a href="/africa">Africa</a>
-        <a href="#">Europe</a>
-        <a href="#">Asia</a>
-        <a href="#">America</a>
-        <a href="#">Antarctica</a>
-        <a href="#">Oceania</a>
+        <ul class="nav-list">
+          <li><a href="/africa" class="nav-link">Africa</a></li>
+          <li><a href="#" class="nav-link">Europe</a></li>
+          <li><a href="#" class="nav-link">Asia</a></li>
+          <li><a href="#" class="nav-link">America</a></li>
+          <li><a href="#" class="nav-link">Antarctica</a></li>
+          <li><a href="#" class="nav-link">Oceania</a></li>
+        </ul>
       </nav>
       <main>
         <cube-component></cube-component>
