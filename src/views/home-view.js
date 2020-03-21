@@ -194,10 +194,10 @@ class HomeView extends LitElement {
           list-style: none;
           background-color: rgba(0,0,0,.9);
           z-index: 1;
+          transition: height 1s ease;
         }
 
         .opened {
-          transition: height 1s ease;
           height: var(--main-height);
         }
 
