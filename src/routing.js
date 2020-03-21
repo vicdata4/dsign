@@ -1,6 +1,6 @@
 import { Router } from '@vaadin/router';
 
-import './views/home-view';
+import './views/home/home-view';
 import './views/africa-view';
 
 export const routing = function () {
