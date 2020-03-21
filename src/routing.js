@@ -1,7 +1,7 @@
 import { Router } from '@vaadin/router';
 
 import './views/home/home-view';
-import './views/africa-view';
+import './views/africa/africa-view';
 
 export const routing = function () {
   const outlet = this.shadowRoot.getElementById('root');

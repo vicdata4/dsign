@@ -8,7 +8,7 @@ export const styles = css`
         --main-height: calc(100% - var(--header-nav-height));
         --technologies-height: auto;
         --information-height: auto;
-        --footer-height: 300px;
+        --footer-height: auto;
 
         --nav-background: rgba(0, 0, 0, 0.07);
         --header-background: rgb(50, 50, 50);
@@ -41,10 +41,6 @@ export const styles = css`
 
     .nav-link:hover {
         border-bottom: 1px solid #59868c;
-    }
-
-    footer {
-        background-color: var(--header-background);
     }
 
     .logo {
@@ -206,6 +202,40 @@ export const styles = css`
     .nav-link {
         text-decoration: none;
         color: #fff;
+    }
+
+    footer {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        padding: 30px 40px;
+        background-color: var(--header-background);
+    }
+
+    .footer-list {
+        color: #fff;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-link {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .footer-link.title {
+        color: red;
+    }
+
+    .footer-line {
+        width: 100%;
+        text-align: center;
+        padding: 60px 0px 40px 0px;
+    }
+
+    .footer-line > a {
+        margin: 0 20px;
     }
 
     @media (min-width: 414px) {

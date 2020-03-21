@@ -84,7 +84,45 @@ class HomeView extends LitElement {
           <hr class="separator centered">
       </section>
       <footer>
-        Footer
+        <div>
+          <ul class="footer-list">
+            <li><a href="/africa" class="footer-link title">CONTINENTS</a></li>
+            <li><a href="/africa" class="footer-link">Africa</a></li>
+            <li><a href="#" class="footer-link">Europe</a></li>
+            <li><a href="#" class="footer-link">Asia</a></li>
+            <li><a href="#" class="footer-link">America</a></li>
+            <li><a href="#" class="footer-link">Antarctica</a></li>
+            <li><a href="#" class="footer-link">Oceania</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="footer-list">
+            <li><a href="/africa" class="footer-link title">CONTINENTS</a></li>
+            <li><a href="/africa" class="footer-link">Africa</a></li>
+            <li><a href="#" class="footer-link">Europe</a></li>
+          </ul>
+          <ul class="footer-list">
+            <li><a href="/africa" class="footer-link title">CONTINENTS</a></li>
+            <li><a href="/africa" class="footer-link">Africa</a></li>
+            <li><a href="#" class="footer-link">Europe</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="footer-list">
+            <li><a href="/africa" class="footer-link title">CONTINENTS</a></li>
+            <li><a href="/africa" class="footer-link">Africa</a></li>
+            <li><a href="#" class="footer-link">Europe</a></li>
+            <li><a href="#" class="footer-link">Asia</a></li>
+            <li><a href="#" class="footer-link">America</a></li>
+            <li><a href="#" class="footer-link">Antarctica</a></li>
+            <li><a href="#" class="footer-link">Oceania</a></li>
+          </ul>
+        </div>
+        <div class="footer-line">
+          <a href="#" class="footer-link">www.dsign.world</a>
+          <a href="#" class="footer-link">Copyright 2020</a>
+          <a href="#" class="footer-link">Hola</a>
+        </div>
       </footer>
     `;
   }
