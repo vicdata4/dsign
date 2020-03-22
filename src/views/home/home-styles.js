@@ -283,7 +283,8 @@ export const styles = css`
     }
 
     .github_link {
-        text-align: center;
+        width: fit-content;
+        align-self: center;
     }
 
     @media (min-width: 414px) {
@@ -340,6 +341,10 @@ export const styles = css`
 
         .information {
             padding: 50px 20%;
+        }
+
+        .areas {
+            padding: 0px 55px;
         }
 
         footer {
