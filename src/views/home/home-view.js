@@ -84,44 +84,38 @@ class HomeView extends LitElement {
           <hr class="separator centered">
       </section>
       <footer>
-        <div>
-          <ul class="footer-list">
-            <li><a href="/africa" class="footer-link title">CONTINENTS</a></li>
-            <li><a href="/africa" class="footer-link">Africa</a></li>
-            <li><a href="#" class="footer-link">Europe</a></li>
-            <li><a href="#" class="footer-link">Asia</a></li>
-            <li><a href="#" class="footer-link">America</a></li>
-            <li><a href="#" class="footer-link">Antarctica</a></li>
-            <li><a href="#" class="footer-link">Oceania</a></li>
-          </ul>
-        </div>
-        <div>
-          <ul class="footer-list">
-            <li><a href="/africa" class="footer-link title">CONTINENTS</a></li>
-            <li><a href="/africa" class="footer-link">Africa</a></li>
-            <li><a href="#" class="footer-link">Europe</a></li>
-          </ul>
-          <ul class="footer-list">
-            <li><a href="/africa" class="footer-link title">CONTINENTS</a></li>
-            <li><a href="/africa" class="footer-link">Africa</a></li>
-            <li><a href="#" class="footer-link">Europe</a></li>
-          </ul>
-        </div>
-        <div>
-          <ul class="footer-list">
-            <li><a href="/africa" class="footer-link title">CONTINENTS</a></li>
-            <li><a href="/africa" class="footer-link">Africa</a></li>
-            <li><a href="#" class="footer-link">Europe</a></li>
-            <li><a href="#" class="footer-link">Asia</a></li>
-            <li><a href="#" class="footer-link">America</a></li>
-            <li><a href="#" class="footer-link">Antarctica</a></li>
-            <li><a href="#" class="footer-link">Oceania</a></li>
-          </ul>
-        </div>
+        <ul class="footer-list">
+          <li class="footer-link title">CONTINENTS</li>
+          <li><a href="/africa" class="footer-link">Africa</a></li>
+          <li><a href="#" class="footer-link">Europe</a></li>
+          <li><a href="#" class="footer-link">Asia</a></li>
+          <li><a href="#" class="footer-link">America</a></li>
+          <li><a href="#" class="footer-link">Antarctica</a></li>
+          <li><a href="#" class="footer-link">Oceania</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li class="footer-link title">TECHNOLOGIES</li>
+          <li><a href="/africa" class="footer-link">HTML5</a></li>
+          <li><a href="#" class="footer-link">CSS3</a></li>
+          <li><a href="#" class="footer-link">Javascript</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li class="footer-link title">DEPENDENCIES</li>
+          <li><a href="/africa" class="footer-link">LitElement</a></li>
+          <li><a href="#" class="footer-link">Vaadin</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li class="footer-link title">RECOMMENDATIONS</li>
+          <li><a href="/africa" class="footer-link">Github</a></li>
+          <li><a href="#" class="footer-link">Flex-box</a></li>
+          <li><a href="#" class="footer-link">Grid Layout</a></li>
+          <li><a href="#" class="footer-link">ES6</a></li>
+          <li><a href="#" class="footer-link">Web Components</a></li>
+          <li><a href="#" class="footer-link">Npm</a></li>
+        </ul>
         <div class="footer-line">
           <a href="#" class="footer-link">www.dsign.world</a>
           <a href="#" class="footer-link">Copyright 2020</a>
-          <a href="#" class="footer-link">Hola</a>
         </div>
       </footer>
     `;

@@ -188,11 +188,11 @@ export const styles = css`
         list-style: none;
         background-color: rgba(0,0,0,.9);
         z-index: 1;
+        transition: height 1s;
     }
 
     .opened {
         height: var(--main-height);
-        transition: height 1s;
     }
 
     .nav-list > li {
@@ -207,7 +207,8 @@ export const styles = css`
     footer {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-around;
+        justify-content: flex-start;
+        align-items: flex-start;
         padding: 30px 40px;
         background-color: var(--header-background);
     }
@@ -217,6 +218,11 @@ export const styles = css`
         list-style: none;
         margin: 0;
         padding: 0;
+        margin: 0 20px;
+    }
+
+    .footer-list > li {
+        margin: 5px 0;
     }
 
     .footer-link {
@@ -225,7 +231,8 @@ export const styles = css`
     }
 
     .footer-link.title {
-        color: red;
+        color: #f9ba02;
+        margin: 15px 0;
     }
 
     .footer-line {
@@ -240,62 +247,76 @@ export const styles = css`
 
     @media (min-width: 414px) {
         .card-text {
-        font-size: 16px;
+            font-size: 16px;
         }
 
         .info-text {
-        font-size: 18px;
+            font-size: 18px;
+        }
+    }
+
+    @media (min-width: 540px) {
+        footer {
+            justify-content: space-around;
         }
     }
 
     @media (min-width: 768px) {
         .nav-list {
-        all: unset;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        list-style: none;
+            all: unset;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            list-style: none;
         }
 
         .nav-list > li {
-        margin: 0 15px 0 15px;
+            margin: 0 15px 0 15px;
         }
 
         .nav-link {
-        color: #424242;
+            color: #424242;
         }
 
         .menu-btn {
-        display: none;
+            display: none;
         }
 
         .technologies {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 0;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0;
         }
 
         .technologies > .card {
-        min-height: 200px;
+            min-height: 200px;
         }
 
         .information {
-        padding: 50px 20%;
+            padding: 50px 20%;
+        }
+
+        footer {
+            padding: 30px 100px;
         }
     }
 
     @media (min-width: 1136px) {
         .column {
-        position: absolute;
-        top: 0;
-        width: 150px;
-        height: 100%;
-        background-color: var(--nav-background);
+            position: absolute;
+            top: 0;
+            width: 150px;
+            height: 100%;
+            background-color: var(--nav-background);
         }
 
         .right {
-        right: 0;
+            right: 0;
+        }
+
+        footer {
+            padding: 30px 200px;
         }
     }
 `;
