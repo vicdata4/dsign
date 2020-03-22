@@ -6,8 +6,10 @@ export const styles = css`
         --nav-height: 50px;
         --header-nav-height: calc(var(--header-height) + var(--nav-height));
         --main-height: calc(100% - var(--header-nav-height));
+        --section-auto-height: auto;
         --technologies-height: auto;
         --information-height: auto;
+        --areas-height: auto;
         --footer-height: auto;
 
         --nav-background: rgba(0, 0, 0, 0.07);
@@ -22,6 +24,7 @@ export const styles = css`
         var(--main-height)
         var(--technologies-height)
         var(--information-height)
+        var(--areas-height)
         var(--footer-height);
 
         width: 100%;
@@ -63,7 +66,18 @@ export const styles = css`
         padding: 0 15px 0 15px;
     }
 
-    .technologies > .card {
+    .areas {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        row-gap: 2px;
+        column-gap: 10px;
+
+        padding: 0 15px 0 15px;
+        margin: 0 10px 80px 10px;
+    }
+
+    .card {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -78,6 +92,20 @@ export const styles = css`
         font-size: 14px;
         letter-spacing: .5px;
         line-height: 21px;
+    }
+
+    .area-card {
+        min-height: 100px;
+        padding: 20px 40px;
+    }
+
+    .area-card.center {
+        border-top: 1px solid var(--header-background);
+        border-bottom: 1px solid var(--header-background);
+    }
+
+    .area-title {
+        margin-top: 0;
     }
 
     .separator {
@@ -246,11 +274,12 @@ export const styles = css`
     .footer-line {
         width: 100%;
         text-align: center;
-        padding: 60px 0px 40px 0px;
+        padding-top: 40px;
     }
 
     .footer-line > a {
-        margin: 0 20px;
+        display: inline-block;
+        margin: 10px 20px;
     }
 
     .github_link {
@@ -305,7 +334,7 @@ export const styles = css`
             padding: 0;
         }
 
-        .technologies > .card {
+        .card {
             min-height: 200px;
         }
 
@@ -319,6 +348,17 @@ export const styles = css`
     }
 
     @media (min-width: 1136px) {
+        .areas {
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0;
+        }
+
+        .area-card.center {
+            border: none;
+            border-left: 1px solid var(--header-background);
+            border-right: 1px solid var(--header-background);
+        }
+
         .column {
             position: absolute;
             top: 0;

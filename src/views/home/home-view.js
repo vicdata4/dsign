@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html } from 'lit-element';
 
 import { material } from '../../utils/fonts';
 import { styles } from './home-styles.js';
@@ -61,17 +61,27 @@ class HomeView extends LitElement {
       <section class="technologies">
         <div class="card">
           ${html5_svg}
-          <p class="card-text"><span class="card-decorator">HTML5</span> is a software solution stack that defines the properties and behaviors of web page content by implementing a <span class="card-decorator">markup-based pattern</span> to it</p>
+          <p class="card-text">
+            <span class="card-decorator">HTML5</span> is a software solution stack that defines the properties and behaviors of web page 
+            content by implementing a <span class="card-decorator">markup-based pattern</span> to it
+          </p>
           <hr class="separator sm red">
         </div>
         <div class="card">
           ${css3_svg}
-          <p class="card-text"><span class="card-decorator">Cascading Style Sheets</span> (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.</p>
+          <p class="card-text">
+            <span class="card-decorator">Cascading Style Sheets</span> (CSS) is a style sheet language used for describing the presentation 
+            of a document written in a markup language like HTML
+          </p>
           <hr class="separator sm blue">
         </div>
         <div class="card">
           ${js_svg}
-          <p class="card-text"><span class="card-decorator">JavaScript</span>, often abbreviated as JS, is a programming language that conforms to the <span class="card-decorator">ECMAScript specification</span>. JavaScript is high-level, often just-in-time compiled, and multi-paradigm.</p>
+          <p class="card-text">
+            <span class="card-decorator">JavaScript</span>, often abbreviated as JS, is a programming language that conforms to 
+            the <span class="card-decorator">ECMAScript specification</span>. JavaScript is high-level, often just-in-time compiled, 
+            and multi-paradigm
+          </p>
           <hr class="separator sm green">
         </div>
       </section>
@@ -84,9 +94,37 @@ class HomeView extends LitElement {
             </div>
           </div>
           <hr class="separator sm green">
-          <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in dolor at diam sagittis blandit in ac nulla. Pellentesque tristique tellus orci, a tincidunt quam sagittis at. <br><br>Maecenas ac ultricies diam. Maecenas quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec tristique ipsum purus sed neque. Donec quis convallis tellus, et fringilla purus. Curabitur condimentum lacus id massa placerat, ac facilisis quam tempus. Sed id dignissim est.</p>
+          <p class="info-text">
+            Dsign project includes different responsive web designs following best practices about presentation, 
+            layout and accessibility using HTML5 and CSS3 features. <br><br>Maecenas ac ultricies diam. Maecenas 
+            quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec tristique 
+            ipsum purus sed neque. Donec quis convallis tellus, et fringilla purus. Curabitur condimentum lacus id 
+            massa placerat, ac facilisis quam tempus. Sed id dignissim est.
+          </p>
           <hr class="separator centered">
           <a href="https://github.com/vicdata4/dsign" class="github_link" target="_blank">${githubSvg}</a>
+      </section>
+      <section class="areas">
+        <div class="area-card">
+          <h2 class="area-title">User experience / UX</h2>
+          <p class="info-text">
+            Dsign project includes different responsive web designs following best practices about presentation, 
+            layout and accessibility using HTML5 and CSS3 features. <br><br>Maecenas ac ultricies diam. Maecenas 
+            quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec 
+            tristique ipsum purus sed neque. Donec quis convallis tellus, et fringilla purus.</p>
+        </div>
+        <div class="area-card center">
+          <h2 class="area-title">Accesibility</h2>
+          <p class="info-text">Dsign project includes different responsive web designs following best practices 
+            about presentation, layout and accessibility using HTML5 and CSS3 features. <br><br>Maecenas ac ultricies diam. 
+            Maecenas quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet.</p>
+        </div>
+        <div class="area-card">
+          <h2 class="area-title">User interface / UI</h2>
+          <p class="info-text">Dsign project includes different responsive web designs following best practices 
+            about presentation, layout and accessibility using HTML5 and CSS3 features. <br><br>Maecenas ac ultricies 
+            diam. Maecenas quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet.</p>
+        </div>
       </section>
       <footer>
         <ul class="footer-list">
@@ -119,8 +157,8 @@ class HomeView extends LitElement {
           <li><a href="#" class="footer-link">Npm</a></li>
         </ul>
         <div class="footer-line">
-          <a href="#" class="footer-link">www.dsign.world</a>
-          <a href="#" class="footer-link">Copyright 2020</a>
+          <a href="#" class="footer-link">dsign.website</a>
+          <a href="#" class="footer-link">OpenSource</a>
           <a href="#" class="footer-link">github.com/vicdata4</a>
         </div>
       </footer>
