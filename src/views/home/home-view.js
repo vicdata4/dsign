@@ -12,22 +12,26 @@ class HomeView extends LitElement {
   }
 
   mobileMenuSwitch() {
-    const mobileMenu = this.shadowRoot.querySelector('.nav-list').classList;
-    const mobileMenuIcon = this.shadowRoot.querySelector('.menu-icon').classList;
-    const mobileMenuBtn = this.shadowRoot.querySelector('.menu-btn');
+    const menu = this.shadowRoot.querySelector('.nav-list').classList;
+    const menuIcon = this.shadowRoot.querySelector('.menu-icon').classList;
+    const menuButton = this.shadowRoot.querySelector('.menu-btn');
+    const isClosed = !mobileMenu.contains('opened');
 
     mobileMenuBtn.disabled = true;
 
-    if (!mobileMenu.contains('opened')) {
-      mobileMenu.add('opened');
-      mobileMenuIcon.add('rotate');
+    if (isClosed) {
+      menu.add('opened');
+      menuIcon.add('rotate');
     } else {
-      mobileMenu.remove('opened');
-      mobileMenuIcon.remove('rotate');
+      menu.remove('opened');
+      menu.add('closed');
+      menuIcon.remove('rotate');
     }
 
     setTimeout(() => {
-      mobileMenuBtn.disabled = false;
+      menuButton.disabled = false;
+      if (!isClosed) menu.remove('closed');
+
     }, 1000);
   }
 
@@ -80,7 +84,7 @@ class HomeView extends LitElement {
             </div>
           </div>
           <hr class="separator sm green">
-          <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in dolor at diam sagittis blandit in ac nulla. Pellentesque tristique tellus orci, a tincidunt quam sagittis at. Maecenas ac ultricies diam. Maecenas quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec tristique ipsum purus sed neque. Donec quis convallis tellus, et fringilla purus. Curabitur condimentum lacus id massa placerat, ac facilisis quam tempus. Sed id dignissim est.</p>
+          <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in dolor at diam sagittis blandit in ac nulla. Pellentesque tristique tellus orci, a tincidunt quam sagittis at. <br><br>Maecenas ac ultricies diam. Maecenas quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec tristique ipsum purus sed neque. Donec quis convallis tellus, et fringilla purus. Curabitur condimentum lacus id massa placerat, ac facilisis quam tempus. Sed id dignissim est.</p>
           <hr class="separator centered">
       </section>
       <footer>
@@ -106,7 +110,7 @@ class HomeView extends LitElement {
         </ul>
         <ul class="footer-list">
           <li class="footer-link title">RECOMMENDATIONS</li>
-          <li><a href="/africa" class="footer-link">Github</a></li>
+          <li><a href="/africa" class="footer-link">Git</a></li>
           <li><a href="#" class="footer-link">Flex-box</a></li>
           <li><a href="#" class="footer-link">Grid Layout</a></li>
           <li><a href="#" class="footer-link">ES6</a></li>
@@ -116,6 +120,7 @@ class HomeView extends LitElement {
         <div class="footer-line">
           <a href="#" class="footer-link">www.dsign.world</a>
           <a href="#" class="footer-link">Copyright 2020</a>
+          <a href="#" class="footer-link">github.com/vicdata4</a>
         </div>
       </footer>
     `;

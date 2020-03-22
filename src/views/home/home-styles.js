@@ -181,18 +181,26 @@ export const styles = css`
 
         width: 100%;
         height: 0;
+
         margin: 0;
         padding: 0;
 
+        background-color: rgba(0,0,0,.9);
         overflow: hidden;
         list-style: none;
-        background-color: rgba(0,0,0,.9);
         z-index: 1;
-        transition: height 1s;
     }
+
 
     .opened {
         height: var(--main-height);
+    }
+
+    .closed {
+        height: 0;
+    }
+    .nav-list.opened, .nav-list.closed {
+        transition: height 1s;
     }
 
     .nav-list > li {
@@ -274,6 +282,10 @@ export const styles = css`
 
         .nav-list > li {
             margin: 0 15px 0 15px;
+        }
+
+        .nav-list.opened {
+            transition: unset;
         }
 
         .nav-link {
