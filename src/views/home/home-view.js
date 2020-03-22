@@ -15,9 +15,9 @@ class HomeView extends LitElement {
     const menu = this.shadowRoot.querySelector('.nav-list').classList;
     const menuIcon = this.shadowRoot.querySelector('.menu-icon').classList;
     const menuButton = this.shadowRoot.querySelector('.menu-btn');
-    const isClosed = !mobileMenu.contains('opened');
+    const isClosed = !menu.contains('opened');
 
-    mobileMenuBtn.disabled = true;
+    menuButton.disabled = true;
 
     if (isClosed) {
       menu.add('opened');
