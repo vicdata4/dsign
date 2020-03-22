@@ -253,6 +253,10 @@ export const styles = css`
         margin: 0 20px;
     }
 
+    .github_link {
+        text-align: center;
+    }
+
     @media (min-width: 414px) {
         .card-text {
             font-size: 16px;

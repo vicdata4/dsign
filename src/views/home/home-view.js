@@ -3,7 +3,7 @@ import { LitElement, html, css } from 'lit-element';
 import { material } from '../../utils/fonts';
 import { styles } from './home-styles.js';
 
-import { html5_svg, css3_svg, js_svg } from '../../utils/icons';
+import { html5_svg, css3_svg, js_svg, githubSvg } from '../../utils/icons';
 import '../../components/cube-component';
 
 class HomeView extends LitElement {
@@ -86,6 +86,7 @@ class HomeView extends LitElement {
           <hr class="separator sm green">
           <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in dolor at diam sagittis blandit in ac nulla. Pellentesque tristique tellus orci, a tincidunt quam sagittis at. <br><br>Maecenas ac ultricies diam. Maecenas quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec tristique ipsum purus sed neque. Donec quis convallis tellus, et fringilla purus. Curabitur condimentum lacus id massa placerat, ac facilisis quam tempus. Sed id dignissim est.</p>
           <hr class="separator centered">
+          <a href="https://github.com/vicdata4/dsign" class="github_link" target="_blank">${githubSvg}</a>
       </section>
       <footer>
         <ul class="footer-list">
