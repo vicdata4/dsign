@@ -42,7 +42,7 @@ class HomeView extends LitElement {
       </header>
       <nav>
         <ul class="nav-list">
-          <li><a href="/africa" class="nav-link">Africa</a></li>
+          <li><a href="#" class="nav-link">Africa</a></li>
           <li><a href="#" class="nav-link">Europe</a></li>
           <li><a href="#" class="nav-link">Asia</a></li>
           <li><a href="#" class="nav-link">America</a></li>
@@ -108,28 +108,29 @@ class HomeView extends LitElement {
         <div class="area-card">
           <h2 class="area-title">User experience / UX</h2>
           <p class="info-text">
-            Dsign project includes different responsive web designs following best practices about presentation, 
-            layout and accessibility using HTML5 and CSS3 features. <br><br>Maecenas ac ultricies diam. Maecenas 
-            quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec 
-            tristique ipsum purus sed neque. Donec quis convallis tellus, et fringilla purus.</p>
+            User experience (UX) is a person's emotions and attitudes about using a particular product, system or service. 
+            It includes the practical, experiential, affective, meaningful and valuable aspects of human–computer interaction 
+            and product ownership. <br><br>Additionally, it includes a person's perceptions of system aspects such as utility, ease of use and efficiency. </p>
         </div>
         <div class="area-card center">
           <h2 class="area-title">Accesibility</h2>
-          <p class="info-text">Dsign project includes different responsive web designs following best practices 
-            about presentation, layout and accessibility using HTML5 and CSS3 features. <br><br>Maecenas ac ultricies diam. 
-            Maecenas quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet.</p>
+          <p class="info-text">Web accessibility is the inclusive practice of ensuring there are no barriers that prevent interaction with, 
+            or access to, websites on the World Wide Web by people with physical disabilities, situational disabilities, and socio-economic 
+            restrictions on bandwidth and speed. <br><br>When sites are correctly designed, developed and edited, generally all users have equal 
+            access to information and functionality.</p>
         </div>
         <div class="area-card">
           <h2 class="area-title">User interface / UI</h2>
-          <p class="info-text">Dsign project includes different responsive web designs following best practices 
-            about presentation, layout and accessibility using HTML5 and CSS3 features. <br><br>Maecenas ac ultricies 
-            diam. Maecenas quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet.</p>
+          <p class="info-text">The user interface (UI), in the industrial design field of human-computer interaction, is the space where 
+            interactions between humans and machines occur. <br><br>The goal of this interaction is to allow effective operation and control of 
+            the machine from the human end, whilst the machine simultaneously feeds back information that aids the operators' decision-making 
+            process. </p>
         </div>
       </section>
       <footer>
         <ul class="footer-list">
           <li class="footer-link title">CONTINENTS</li>
-          <li><a href="/africa" class="footer-link">Africa</a></li>
+          <li><a href="#" class="footer-link">Africa</a></li>
           <li><a href="#" class="footer-link">Europe</a></li>
           <li><a href="#" class="footer-link">Asia</a></li>
           <li><a href="#" class="footer-link">America</a></li>
@@ -138,18 +139,18 @@ class HomeView extends LitElement {
         </ul>
         <ul class="footer-list">
           <li class="footer-link title">TECHNOLOGIES</li>
-          <li><a href="/africa" class="footer-link">HTML5</a></li>
+          <li><a href="#" class="footer-link">HTML5</a></li>
           <li><a href="#" class="footer-link">CSS3</a></li>
           <li><a href="#" class="footer-link">Javascript</a></li>
         </ul>
         <ul class="footer-list">
           <li class="footer-link title">DEPENDENCIES</li>
-          <li><a href="/africa" class="footer-link">LitElement</a></li>
+          <li><a href="#" class="footer-link">LitElement</a></li>
           <li><a href="#" class="footer-link">Vaadin</a></li>
         </ul>
         <ul class="footer-list">
           <li class="footer-link title">RECOMMENDATIONS</li>
-          <li><a href="/africa" class="footer-link">Git</a></li>
+          <li><a href="#" class="footer-link">Git</a></li>
           <li><a href="#" class="footer-link">Flex-box</a></li>
           <li><a href="#" class="footer-link">Grid Layout</a></li>
           <li><a href="#" class="footer-link">ES6</a></li>

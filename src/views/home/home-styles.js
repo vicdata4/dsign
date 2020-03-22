@@ -73,8 +73,7 @@ export const styles = css`
         row-gap: 2px;
         column-gap: 10px;
 
-        padding: 0 15px 0 15px;
-        margin: 0 10px 80px 10px;
+        padding: 0 40px;
     }
 
     .card {
@@ -96,7 +95,7 @@ export const styles = css`
 
     .area-card {
         min-height: 100px;
-        padding: 20px 40px;
+        padding: 20px 0;
     }
 
     .area-card.center {
@@ -143,7 +142,7 @@ export const styles = css`
     .information {
         display: flex;
         flex-direction: column;
-        padding: 50px 40px;
+        padding: 50px 40px 20px 40px;
     }
 
     .info-text {
@@ -285,6 +284,7 @@ export const styles = css`
     .github_link {
         width: fit-content;
         align-self: center;
+        margin: 50px 0;
     }
 
     @media (min-width: 414px) {
@@ -301,6 +301,15 @@ export const styles = css`
         footer {
             justify-content: space-around;
         }
+
+        .area {
+            padding: 40px 0;
+        }
+
+        .area-card {
+            padding: 20px 0;
+        }
+
     }
 
     @media (min-width: 768px) {
@@ -344,7 +353,8 @@ export const styles = css`
         }
 
         .areas {
-            padding: 0px 55px;
+            padding: 0px 65px;
+            margin: 0 0 80px 0;
         }
 
         footer {
@@ -356,6 +366,10 @@ export const styles = css`
         .areas {
             grid-template-columns: repeat(3, 1fr);
             padding: 0;
+        }
+
+        .area-card {
+            padding: 20px 40px;
         }
 
         .area-card.center {
