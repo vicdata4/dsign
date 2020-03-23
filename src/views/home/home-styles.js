@@ -15,6 +15,8 @@ export const styles = css`
         --nav-background: rgba(0, 0, 0, 0.07);
         --header-background: rgb(50, 50, 50);
 
+        --border-grey: #c7c4c4;
+
         font-family: 'Sen', sans-serif;
         display: grid;
         position: relative;
@@ -99,12 +101,13 @@ export const styles = css`
     }
 
     .area-card.center {
-        border-top: 1px solid var(--header-background);
-        border-bottom: 1px solid var(--header-background);
+        border-top: 1px solid var(--border-grey);
+        border-bottom: 1px solid var(--border-grey);
     }
 
     .area-title {
         margin-top: 0;
+        color: #0e97cc;
     }
 
     .separator {
@@ -290,6 +293,7 @@ export const styles = css`
     @media (min-width: 414px) {
         .card-text {
             font-size: 16px;
+            line-height: 28px;
         }
 
         .info-text {
@@ -304,6 +308,10 @@ export const styles = css`
 
         .area {
             padding: 40px 0;
+        }
+
+        .card-text {
+            font-size: 20px;
         }
 
         .area-card {
@@ -339,11 +347,6 @@ export const styles = css`
             display: none;
         }
 
-        .technologies {
-            grid-template-columns: repeat(3, 1fr);
-            padding: 0;
-        }
-
         .card {
             min-height: 200px;
         }
@@ -363,9 +366,19 @@ export const styles = css`
     }
 
     @media (min-width: 1136px) {
+        .technologies {
+            grid-template-columns: repeat(3, 1fr);
+            padding: 0;
+        }
+
         .areas {
             grid-template-columns: repeat(3, 1fr);
             padding: 0;
+        }
+
+        .card-text {
+            font-size: 16px;
+            line-height: 21px;
         }
 
         .area-card {
@@ -374,8 +387,8 @@ export const styles = css`
 
         .area-card.center {
             border: none;
-            border-left: 1px solid var(--header-background);
-            border-right: 1px solid var(--header-background);
+            border-left: 1px solid var(--border-grey);
+            border-right: 1px solid var(--border-grey);
         }
 
         .column {
