@@ -59,7 +59,7 @@ class HomeView extends LitElement {
         <div class="column right"></div>
       </main>
       <section class="technologies">
-        <div class="card">
+        <div class="tech-card">
           ${html5_svg}
           <p class="card-text">
             <span class="card-decorator">HTML5</span> is a software solution stack that defines the properties and behaviors of web page 
@@ -67,7 +67,7 @@ class HomeView extends LitElement {
           </p>
           <hr class="separator sm red">
         </div>
-        <div class="card">
+        <div class="tech-card">
           ${css3_svg}
           <p class="card-text">
             <span class="card-decorator">Cascading Style Sheets</span> (CSS) is a style sheet language used for describing the presentation 
@@ -75,7 +75,7 @@ class HomeView extends LitElement {
           </p>
           <hr class="separator sm blue">
         </div>
-        <div class="card">
+        <div class="tech-card">
           ${js_svg}
           <p class="card-text">
             <span class="card-decorator">JavaScript</span>, often abbreviated as JS, is a programming language that conforms to 
@@ -88,7 +88,7 @@ class HomeView extends LitElement {
       <section class="information">
           <div class="info-header">
             <h2>Dsign project</h2>
-            <div class="icons">
+            <div class="info-icons">
               <i class="material-icons favourite-red">favorite_border</i>
               <i class="material-icons share-purple">share</i>
             </div>
