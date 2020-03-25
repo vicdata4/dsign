@@ -62,7 +62,7 @@ const technologiesSectionStyles = css`
         grid-template-columns: 1fr;
         column-gap: 2px;
         row-gap: 2px;
-        padding: 0 15px 0 15px;
+        padding: 20px 15px 0 15px;
     }
 
     .tech-card {
@@ -102,6 +102,10 @@ const technologiesSectionStyles = css`
         .card-text {
             font-size: 18px;
         }
+
+        .technologies {
+            margin: 40px 20px 0 20px;
+        }
     }
 
     @media (min-width: 768px) {
@@ -113,6 +117,7 @@ const technologiesSectionStyles = css`
     @media (min-width: 1136px) {
         .technologies {
             grid-template-columns: repeat(3, 1fr);
+            margin: 80px 50px 0 50px;
             padding: 0;
         }
 
@@ -353,6 +358,29 @@ const headerStyles = css`
 `;
 
 const mainStyles = css`
+    main {
+        /*background: url('assets/images/cloud.jpg') no-repeat;
+        background-size: 100%;*/
+        display: flex;
+        justify-content: center;
+        background-color: rgba(104, 132, 128, 0.97);
+    }
+
+    .main-title {
+        color: white;
+        font-size: 40px;
+        font-weight: 700;
+        font-family: 'Raleway', sans-serif;
+        margin-top: 100px;
+        margin-bottom: 10px;
+
+    }
+
+    .main-icon {
+        color: white;
+        font-size: 50px;
+    }
+    
     cube-component {
         display: flex;
         justify-content: center;
@@ -360,9 +388,27 @@ const mainStyles = css`
         height: 100%;
     }
 
+    @media (min-width: 768px) {
+        .main-title {
+            font-size: 60px;
+        }
+
+        .main-container {
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            padding: 0 120px;
+            /*background-color: rgb(104, 132, 128);*/
+        }
+
+        .main-icon {
+            font-size: 70px;
+        }
+    }
+
     @media (min-width: 1136px) {
         .column {
             position: absolute;
+            left: 0;
             top: 0;
             width: 150px;
             height: 100%;
@@ -370,7 +416,17 @@ const mainStyles = css`
         }
 
         .right {
+            left: unset;
             right: 0;
+        }
+
+        .column-bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.02);
+            
         }
     }
 `;
@@ -387,7 +443,7 @@ export const styles = css`
         --areas-height: auto;
         --footer-height: auto;
 
-        --nav-background: rgba(0, 0, 0, 0.07);
+        --nav-background: rgba(0, 0, 0, 0.05);
         --header-background: rgb(50, 50, 50);
 
         --border-grey: #c7c4c4;
