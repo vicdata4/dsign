@@ -56,7 +56,7 @@ class HomeView extends LitElement {
       <main>
         <!-- <cube-component></cube-component> -->
         <div class="main-container">
-          <h1 class="main-title">BEST PRACTICES<br>ABOUT<br>WEB DESIGN</h1>
+          <h1 class="main-title">WEB DESIGN<br>BEST PRACTICES</h1>
           <hr>
           <i class="material-icons main-icon">sentiment_satisfied_alt</i>
           <i class="material-icons main-icon">touch_app</i>

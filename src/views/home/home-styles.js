@@ -112,18 +112,27 @@ const technologiesSectionStyles = css`
         .tech-card {
             min-height: 200px;
         }
+
+        .technologies {
+            margin: 40px 60px 0 60px;
+        }
+
+        .card-text {
+            padding: 0 80px 0 80px;
+        }
     }
 
     @media (min-width: 1136px) {
         .technologies {
             grid-template-columns: repeat(3, 1fr);
-            margin: 80px 50px 0 50px;
+            margin: 60px 90px 0 90px;
             padding: 0;
         }
 
         .card-text {
             font-size: 16px;
             line-height: 21px;
+            padding: unset;
         }
     }
 `;
@@ -193,6 +202,8 @@ const footerStyles = css`
 const navigatorStyles = css`
     nav {
         background-color: var(--nav-background);
+        letter-spacing: 1.6px;
+        font-size: 16px;
     }
 
     .nav-link:hover {
@@ -371,7 +382,7 @@ const mainStyles = css`
         font-size: 40px;
         font-weight: 700;
         font-family: 'Raleway', sans-serif;
-        margin-top: 100px;
+        margin-top: 130px;
         margin-bottom: 10px;
 
     }
@@ -386,6 +397,15 @@ const mainStyles = css`
         justify-content: center;
         align-items: center;
         height: 100%;
+    }
+
+    .column-bottom {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        border-top: 1px solid #8d9c9b;
+        background-color: rgba(255, 255, 255, 0.02);
     }
 
     @media (min-width: 768px) {
@@ -419,15 +439,13 @@ const mainStyles = css`
             left: unset;
             right: 0;
         }
+    }
 
+    @media (min-width: 1800px) {
         .column-bottom {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
             height: 200px;
-            background-color: rgba(255, 255, 255, 0.02);
-            
         }
+        
     }
 `;
 
