@@ -383,13 +383,19 @@ const mainStyles = css`
         font-weight: 700;
         font-family: 'Raleway', sans-serif;
         margin-top: 130px;
-        margin-bottom: 10px;
+        margin-bottom: 0;
 
     }
 
     .main-icon {
         color: white;
         font-size: 50px;
+    }
+
+    .separator-main {
+        border-bottom-left-radius: 0;
+        margin-bottom: 15px;
+        margin-top: 15px;
     }
     
     cube-component {
