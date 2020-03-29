@@ -11,6 +11,25 @@ class HomeView extends LitElement {
     return [material, styles];
   }
 
+  constructor() {
+    super();
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > window.innerHeight) {
+        this.shadowRoot.querySelector('.scrolltop-arrow').style.opacity = '1';
+      } else {
+        this.shadowRoot.querySelector('.scrolltop-arrow').style.opacity = '0';
+      }
+    })
+  }
+
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   mobileMenuSwitch() {
     const menu = this.shadowRoot.querySelector('.nav-list').classList;
     const menuIcon = this.shadowRoot.querySelector('.menu-icon').classList;
@@ -54,7 +73,6 @@ class HomeView extends LitElement {
         </button>
       </nav>
       <main>
-        <!-- <cube-component></cube-component> -->
         <div class="main-container">
           <h1 class="main-title">WEB DESIGN<br>BEST PRACTICES</h1>
           <hr class="separator separator-main">
@@ -173,6 +191,9 @@ class HomeView extends LitElement {
           <a href="#" class="footer-link">github.com/vicdata4</a>
         </div>
       </footer>
+      <button class="scrolltop-arrow" @click="${this.scrollToTop}">
+        <i class="material-icons">arrow_upward</i>
+      </button>
     `;
   }
 }

@@ -520,6 +520,22 @@ export const styles = css`
         border-bottom-width: 2px;
     }
 
+    .scrolltop-arrow {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0,0,0,0.8);
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 20px;
+        opacity: 0;
+        border: none;
+        border-radius: 100%;
+        color: white;
+        transition: opacity .6s;
+        cursor: pointer;
+    }
+
     ${headerStyles}
     ${navigatorStyles}
     ${mainStyles}
