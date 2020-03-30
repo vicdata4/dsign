@@ -291,7 +291,7 @@ const navigatorStyles = css`
     }
 
     .nav-link.fixed {
-        color: white;
+        color: #fff;
     }
 
     @media (min-width: 768px) {
@@ -351,8 +351,14 @@ const informationSectionStyles = css`
         width: 130px;
     }
 
-    .info-icons > i {
+    .info-icons > button {
+        padding: 0;
         margin: 0 5px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .info-icons > button > i {
         font-size: 30px;
     }
 

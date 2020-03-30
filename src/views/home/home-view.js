@@ -89,7 +89,7 @@ class HomeView extends LitElement {
   render() {
     return html`
       <header>
-        <img class="logo" src="assets/images/dsign_logosub.png" alt="logo">
+        <img class="logo" src="assets/images/dsign_logosub.png" alt="logo" aria-label="Design project website" tabindex="0">
       </header>
       <nav>
         <ul class="nav-list">
@@ -98,14 +98,14 @@ class HomeView extends LitElement {
         <div class="scroll-menu">
           <img class="logo" src="assets/images/dsign_logo.png" alt="logo">
           <ul class="nav-list">
-            ${navList.map(info => html`<li><a href="${info.path}" class="nav-link fixed">${info.name}</a></li>`)}
+            ${navList.map(info => html`<li><a href="${info.path}" class="nav-link fixed" tabindex="-1">${info.name}</a></li>`)}
           </ul>
         </div>
         <button type="button" class="menu-btn" @click="${this.mobileMenuSwitch}">
           <i class="material-icons menu-icon">expand_more</i>
         </button>
       </nav>
-      <main>
+      <main aria-label="Web design best practices" tabindex="0">
         <div class="main-container">
           <h1 class="main-title">WEB DESIGN<br>BEST PRACTICES</h1>
           <hr class="separator separator-main">
@@ -119,8 +119,8 @@ class HomeView extends LitElement {
         <div class="column right"></div>
         <div class="column-bottom"></div>
       </main>
-      <section class="technologies">
-        <div class="tech-card">
+      <section class="technologies" aria-label="Technologies section" tabindex="0">
+        <div class="tech-card" aria-label="HTML5" tabindex="0">
           ${html5_svg}
           <p class="card-text">
             <span class="card-decorator">HTML5</span> is a software solution stack that defines the properties and behaviors of web page 
@@ -128,7 +128,7 @@ class HomeView extends LitElement {
           </p>
           <hr class="separator sm red">
         </div>
-        <div class="tech-card">
+        <div class="tech-card" aria-label="CSS3" tabindex="0">
           ${css3_svg}
           <p class="card-text">
             <span class="card-decorator">Cascading Style Sheets</span> (CSS) is a style sheet language used for describing the presentation 
@@ -136,7 +136,7 @@ class HomeView extends LitElement {
           </p>
           <hr class="separator sm blue">
         </div>
-        <div class="tech-card">
+        <div class="tech-card" aria-label="Javascript" tabindex="0">
           ${js_svg}
           <p class="card-text">
             <span class="card-decorator">JavaScript</span>, often abbreviated as JS, is a programming language that conforms to 
@@ -146,16 +146,16 @@ class HomeView extends LitElement {
           <hr class="separator sm green">
         </div>
       </section>
-      <section class="information">
-          <div class="info-header">
-            <h2>Dsign project</h2>
-            <div class="info-icons">
-              <i class="material-icons favourite-red">favorite_border</i>
-              <i class="material-icons share-purple">share</i>
-            </div>
+      <section class="information" aria-label="About design project" tabindex="0">
+        <div class="info-header">
+          <h2>Dsign project</h2>
+          <div class="info-icons">
+            <button type="button"><i class="material-icons favourite-red">favorite_border</i></button>
+            <button type="button"><i class="material-icons share-purple">share</i></button>
           </div>
-          <hr class="separator sm green">
-          <p class="info-text">
+        </div>
+        <hr class="separator sm green">
+        <p class="info-text" aria-label="Dsign project text" tabindex="0">
             Dsign project includes different responsive web designs following best practices about presentation, 
             layout and accessibility using HTML5 and CSS3 features. <br><br>Maecenas ac ultricies diam. Maecenas 
             quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec tristique 
@@ -165,32 +165,32 @@ class HomeView extends LitElement {
           <hr class="separator centered">
           <a href="https://github.com/vicdata4/dsign" class="github_link" target="_blank">${githubSvg}</a>
       </section>
-      <section class="areas">
+      <section class="areas" aria-label="Web design sections" tabindex="0">
         <div class="area-card">
-          <h2 class="area-title">User experience / UX</h2>
-          <p class="info-text">
+          <h2 class="area-title" tabindex="0">User experience / UX</h2>
+          <p class="info-text" tabindex="0">
             User experience (UX) is a person's emotions and attitudes about using a particular product, system or service. 
             It includes the practical, experiential, affective, meaningful and valuable aspects of human–computer interaction 
             and product ownership. <br><br>Additionally, it includes a person's perceptions of system aspects such as utility, ease of use and efficiency. </p>
         </div>
         <div class="area-card center">
-          <h2 class="area-title">Accesibility</h2>
-          <p class="info-text">Web accessibility is the inclusive practice of ensuring there are no barriers that prevent interaction with, 
+          <h2 class="area-title" tabindex="0">Accesibility</h2>
+          <p class="info-text" tabindex="0">Web accessibility is the inclusive practice of ensuring there are no barriers that prevent interaction with, 
             or access to, websites on the World Wide Web by people with physical disabilities, situational disabilities, and socio-economic 
             restrictions on bandwidth and speed. <br><br>When sites are correctly designed, developed and edited, generally all users have equal 
             access to information and functionality.</p>
         </div>
         <div class="area-card">
-          <h2 class="area-title">User interface / UI</h2>
-          <p class="info-text">The user interface (UI), in the industrial design field of human-computer interaction, is the space where 
+          <h2 class="area-title" tabindex="0">User interface / UI</h2>
+          <p class="info-text" tabindex="0">The user interface (UI), in the industrial design field of human-computer interaction, is the space where 
             interactions between humans and machines occur. <br><br>The goal of this interaction is to allow effective operation and control of 
             the machine from the human end, whilst the machine simultaneously feeds back information that aids the operators' decision-making 
             process. </p>
         </div>
       </section>
-      <footer>
+      <footer aria-label="Footer section" tabindex="0">
         <ul class="footer-list">
-          <li class="footer-link title">CONTINENTS</li>
+          <li class="footer-link title" aria-label="Menu links" tabindex="0">CONTINENTS</li>
           <li><a href="#" class="footer-link">Africa</a></li>
           <li><a href="#" class="footer-link">Europe</a></li>
           <li><a href="#" class="footer-link">Asia</a></li>
@@ -199,18 +199,18 @@ class HomeView extends LitElement {
           <li><a href="#" class="footer-link">Oceania</a></li>
         </ul>
         <ul class="footer-list">
-          <li class="footer-link title">TECHNOLOGIES</li>
+          <li class="footer-link title" aria-label="Technologies links" tabindex="0">TECHNOLOGIES</li>
           <li><a href="#" class="footer-link">HTML5</a></li>
           <li><a href="#" class="footer-link">CSS3</a></li>
           <li><a href="#" class="footer-link">Javascript</a></li>
         </ul>
         <ul class="footer-list">
-          <li class="footer-link title">DEPENDENCIES</li>
+          <li class="footer-link title" aria-label="Dependencies links" tabindex="0">DEPENDENCIES</li>
           <li><a href="#" class="footer-link">LitElement</a></li>
           <li><a href="#" class="footer-link">Vaadin</a></li>
         </ul>
         <ul class="footer-list">
-          <li class="footer-link title">RECOMMENDATIONS</li>
+          <li class="footer-link title" aria-label="Recomendations links" tabindex="0">RECOMMENDATIONS</li>
           <li><a href="#" class="footer-link">Git</a></li>
           <li><a href="#" class="footer-link">Flex-box</a></li>
           <li><a href="#" class="footer-link">Grid Layout</a></li>
@@ -218,13 +218,13 @@ class HomeView extends LitElement {
           <li><a href="#" class="footer-link">Web Components</a></li>
           <li><a href="#" class="footer-link">Npm</a></li>
         </ul>
-        <div class="footer-line">
+        <div class="footer-line" aria-label="Website links" tabindex="0">
           <a href="#" class="footer-link">dsign.website</a>
           <a href="#" class="footer-link">OpenSource</a>
           <a href="#" class="footer-link">github.com/vicdata4</a>
         </div>
       </footer>
-      <button class="scrolltop-arrow" @click="${this.scrollToTop}">
+      <button aria-label="Scroll to top" class="scrolltop-arrow" @click="${this.scrollToTop}">
         <i class="material-icons">arrow_upward</i>
       </button>
     `;
