@@ -15,10 +15,15 @@ class HomeView extends LitElement {
     super();
 
     window.addEventListener('scroll', () => {
-      if (window.scrollY > window.innerHeight) {
-        this.shadowRoot.querySelector('.scrolltop-arrow').style.opacity = '1';
+      const arrowBtn = this.shadowRoot.querySelector('.scrolltop-arrow');
+      const scrollMenu = this.shadowRoot.querySelector('.scroll-menu');
+
+      arrowBtn.style.opacity = (window.scrollY > window.innerHeight) ? '1' : '0';
+
+      if (window.scrollY > 170) {
+        scrollMenu.style.top = '0';
       } else {
-        this.shadowRoot.querySelector('.scrolltop-arrow').style.opacity = '0';
+        scrollMenu.style.top = '-70px';
       }
     })
   }
@@ -27,7 +32,7 @@ class HomeView extends LitElement {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
-    })
+    });
   }
 
   mobileMenuSwitch() {
@@ -68,6 +73,9 @@ class HomeView extends LitElement {
           <li><a href="#" class="nav-link">Antarctica</a></li>
           <li><a href="#" class="nav-link">Oceania</a></li>
         </ul>
+        <div class="scroll-menu">
+          <img class="logo" src="assets/images/dsign_logo.png" alt="logo">
+        </div>
         <button type="button" class="menu-btn" @click="${this.mobileMenuSwitch}">
           <i class="material-icons menu-icon">expand_more</i>
         </button>

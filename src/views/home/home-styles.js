@@ -271,6 +271,25 @@ const navigatorStyles = css`
         color: #fff;
     }
 
+    .scroll-menu {
+        position: fixed;
+        top: -70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        width: 100%;
+        background-color: var(--header-background);
+        opacity: .98;
+        transition: all .5s;
+        z-index: 2;
+    }
+
+    .scroll-menu > img {
+        width: 90px;
+        margin-left: 20px;
+    }
+
     @media (min-width: 768px) {
         .nav-list {
             all: unset;
