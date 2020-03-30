@@ -281,13 +281,17 @@ const navigatorStyles = css`
         width: 100%;
         background-color: var(--header-background);
         opacity: .98;
-        transition: all .5s;
+        transition: top .5s;
         z-index: 2;
     }
 
     .scroll-menu > img {
         width: 90px;
         margin-left: 20px;
+    }
+
+    .nav-link.fixed {
+        color: white;
     }
 
     @media (min-width: 768px) {

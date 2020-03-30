@@ -6,6 +6,33 @@ import { styles } from './home-styles.js';
 import { html5_svg, css3_svg, js_svg, githubSvg } from '../../utils/icons';
 import '../../components/cube-component';
 
+const navList = [
+  {
+    name: 'Africa',
+    path: '#'
+  },
+  {
+    name: 'Europe',
+    path: '#'
+  },
+  {
+    name: 'Asia',
+    path: '#'
+  },
+  {
+    name: 'America',
+    path: '#'
+  },
+  {
+    name: 'Antarctica',
+    path: '#'
+  },
+  {
+    name: 'Oceania',
+    path: '#'
+  }
+];
+
 class HomeView extends LitElement {
   static get styles() {
     return [material, styles];
@@ -66,15 +93,13 @@ class HomeView extends LitElement {
       </header>
       <nav>
         <ul class="nav-list">
-          <li><a href="#" class="nav-link">Africa</a></li>
-          <li><a href="#" class="nav-link">Europe</a></li>
-          <li><a href="#" class="nav-link">Asia</a></li>
-          <li><a href="#" class="nav-link">America</a></li>
-          <li><a href="#" class="nav-link">Antarctica</a></li>
-          <li><a href="#" class="nav-link">Oceania</a></li>
+          ${navList.map(info => html`<li><a href="${info.path}" class="nav-link">${info.name}</a></li>`)}
         </ul>
         <div class="scroll-menu">
           <img class="logo" src="assets/images/dsign_logo.png" alt="logo">
+          <ul class="nav-list">
+            ${navList.map(info => html`<li><a href="${info.path}" class="nav-link fixed">${info.name}</a></li>`)}
+          </ul>
         </div>
         <button type="button" class="menu-btn" @click="${this.mobileMenuSwitch}">
           <i class="material-icons menu-icon">expand_more</i>
