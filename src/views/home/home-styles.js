@@ -130,8 +130,7 @@ const technologiesSectionStyles = css`
         }
 
         .card-text {
-            font-size: 16px;
-            line-height: 21px;
+            line-height: 24px;
             padding: unset;
         }
     }
@@ -283,6 +282,10 @@ const navigatorStyles = css`
         opacity: .98;
         transition: top .5s;
         z-index: 2;
+    }
+
+    .scroll-menu > .nav-list {
+        margin-right: 30px;
     }
 
     .scroll-menu > img {

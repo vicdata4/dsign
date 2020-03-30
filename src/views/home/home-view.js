@@ -89,7 +89,7 @@ class HomeView extends LitElement {
   render() {
     return html`
       <header>
-        <img class="logo" src="assets/images/dsign_logosub.png" alt="logo" aria-label="Design project website" tabindex="0">
+        <img class="logo" src="assets/images/dsign_logosub.png" alt="logo">
       </header>
       <nav>
         <ul class="nav-list">
@@ -122,7 +122,7 @@ class HomeView extends LitElement {
       <section class="technologies" aria-label="Technologies section" tabindex="0">
         <div class="tech-card" aria-label="HTML5" tabindex="0">
           ${html5_svg}
-          <p class="card-text">
+          <p class="card-text" tabindex="0">
             <span class="card-decorator">HTML5</span> is a software solution stack that defines the properties and behaviors of web page 
             content by implementing a <span class="card-decorator">markup-based pattern</span> to it
           </p>
@@ -130,7 +130,7 @@ class HomeView extends LitElement {
         </div>
         <div class="tech-card" aria-label="CSS3" tabindex="0">
           ${css3_svg}
-          <p class="card-text">
+          <p class="card-text" tabindex="0">
             <span class="card-decorator">Cascading Style Sheets</span> (CSS) is a style sheet language used for describing the presentation 
             of a document written in a markup language like HTML
           </p>
@@ -138,7 +138,7 @@ class HomeView extends LitElement {
         </div>
         <div class="tech-card" aria-label="Javascript" tabindex="0">
           ${js_svg}
-          <p class="card-text">
+          <p class="card-text" tabindex="0">
             <span class="card-decorator">JavaScript</span>, often abbreviated as JS, is a programming language that conforms to 
             the <span class="card-decorator">ECMAScript specification</span>. JavaScript is high-level, often just-in-time compiled, 
             and multi-paradigm
@@ -146,7 +146,7 @@ class HomeView extends LitElement {
           <hr class="separator sm green">
         </div>
       </section>
-      <section class="information" aria-label="About design project" tabindex="0">
+      <section class="information" aria-label="About dsign project" tabindex="0">
         <div class="info-header">
           <h2>Dsign project</h2>
           <div class="info-icons">
@@ -155,7 +155,7 @@ class HomeView extends LitElement {
           </div>
         </div>
         <hr class="separator sm green">
-        <p class="info-text" aria-label="Dsign project text" tabindex="0">
+        <p class="info-text" tabindex="0">
             Dsign project includes different responsive web designs following best practices about presentation, 
             layout and accessibility using HTML5 and CSS3 features. <br><br>Maecenas ac ultricies diam. Maecenas 
             quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec tristique 
