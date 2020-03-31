@@ -501,7 +501,7 @@ export const styles = css`
         --header-height: 120px;
         --nav-height: 50px;
         --header-nav-height: calc(var(--header-height) + var(--nav-height));
-        --main-height: calc(100% - var(--header-nav-height));
+        --main-height: calc(100vh - var(--header-nav-height));
         --section-auto-height: auto;
         --technologies-height: auto;
         --information-height: auto;
@@ -519,14 +519,20 @@ export const styles = css`
         grid-template-rows:
         var(--header-height)
         var(--nav-height)
+        auto;
+
+        width: 100%;
+        height: 100%;
+    }
+    
+    .main-view {
+        display: grid;
+        grid-template-rows:
         var(--main-height)
         var(--technologies-height)
         var(--information-height)
         var(--areas-height)
         var(--footer-height);
-
-        width: 100%;
-        height: 100%;
     }
 
     .separator {
