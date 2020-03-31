@@ -1,7 +1,6 @@
 import { Router } from '@vaadin/router';
 
 import './views/home/home-view';
-import './views/africa/africa-view';
 
 export const routing = function () {
   const outlet = this.shadowRoot.getElementById('root');
@@ -9,7 +8,6 @@ export const routing = function () {
 
   var routes = [
     { path: '/', component: 'home-view' },
-    { path: '/africa', component: 'africa-view' },
     { path: '(.*)', component: 'not-found-view' }
   ];
 
