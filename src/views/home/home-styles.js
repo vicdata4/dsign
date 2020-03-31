@@ -218,7 +218,7 @@ const navigatorStyles = css`
         cursor: pointer;
     }
 
-    .menu-icon {
+    .menu-icon, .scroll-menu-icon {
         font-size: 40px;
         color: #716a6f;
         transition: transform 1s;
@@ -297,6 +297,17 @@ const navigatorStyles = css`
         color: #fff;
     }
 
+    .scroll-menu-btn {
+        margin-right: 20px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .scroll-menu-btn > i {
+        color: white;
+    }
+
     @media (min-width: 768px) {
         .nav-list {
             all: unset;
@@ -320,7 +331,7 @@ const navigatorStyles = css`
             color: #424242;
         }
 
-        .menu-btn {
+        .menu-btn, .scroll-menu-btn {
             display: none;
         }
     }

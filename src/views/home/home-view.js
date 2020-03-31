@@ -95,6 +95,9 @@ class HomeView extends LitElement {
           <ul class="nav-list">
             ${navList.map(info => html`<li><a href="${info.path}" class="nav-link fixed" tabindex="-1">${info.name}</a></li>`)}
           </ul>
+          <button type="button" class="scroll-menu-btn">
+            <i class="material-icons scroll-menu-icon">expand_more</i>
+          </button>
         </div>
         <button type="button" class="menu-btn" @click="${this.mobileMenuSwitch}">
           <i class="material-icons menu-icon">expand_more</i>
@@ -114,7 +117,7 @@ class HomeView extends LitElement {
         <div class="column right"></div>
         <div class="column-bottom"></div>
       </main>
-      <section class="technologies" aria-label="Technologies section" tabindex="0">
+      <div class="technologies" aria-label="Technologies section" tabindex="0">
         <div class="tech-card" aria-label="HTML5" tabindex="0">
           ${html5_svg}
           <p class="card-text" tabindex="0">
@@ -140,8 +143,8 @@ class HomeView extends LitElement {
           </p>
           <hr class="separator sm green">
         </div>
-      </section>
-      <section class="information" aria-label="About dsign project" tabindex="0">
+      </div>
+      <div class="information" aria-label="About dsign project" tabindex="0">
         <div class="info-header">
           <h2>Dsign project</h2>
           <div class="info-icons">
@@ -159,30 +162,30 @@ class HomeView extends LitElement {
           </p>
           <hr class="separator centered">
           <a href="https://github.com/vicdata4/dsign" class="github_link" target="_blank">${githubSvg}</a>
-      </section>
-      <section class="areas" aria-label="Web design sections" tabindex="0">
-        <div class="area-card">
+      </div>
+      <div class="areas" aria-label="Web design sections" tabindex="0">
+        <article class="area-card">
           <h2 class="area-title" tabindex="0">User experience / UX</h2>
           <p class="info-text" tabindex="0">
             User experience (UX) is a person's emotions and attitudes about using a particular product, system or service. 
             It includes the practical, experiential, affective, meaningful and valuable aspects of human–computer interaction 
             and product ownership. <br><br>Additionally, it includes a person's perceptions of system aspects such as utility, ease of use and efficiency. </p>
-        </div>
-        <div class="area-card center">
+        </article>
+        <article class="area-card center">
           <h2 class="area-title" tabindex="0">Accesibility</h2>
           <p class="info-text" tabindex="0">Web accessibility is the inclusive practice of ensuring there are no barriers that prevent interaction with, 
             or access to, websites on the World Wide Web by people with physical disabilities, situational disabilities, and socio-economic 
             restrictions on bandwidth and speed. <br><br>When sites are correctly designed, developed and edited, generally all users have equal 
             access to information and functionality.</p>
-        </div>
-        <div class="area-card">
+        </article>
+        <article class="area-card">
           <h2 class="area-title" tabindex="0">User interface / UI</h2>
           <p class="info-text" tabindex="0">The user interface (UI), in the industrial design field of human-computer interaction, is the space where 
             interactions between humans and machines occur. <br><br>The goal of this interaction is to allow effective operation and control of 
             the machine from the human end, whilst the machine simultaneously feeds back information that aids the operators' decision-making 
             process. </p>
-        </div>
-      </section>
+        </article>
+      </div>
       <footer aria-label="Footer section" tabindex="0">
         <ul class="footer-list">
           <li class="footer-link title" aria-label="Menu links" tabindex="0">CONTINENTS</li>
