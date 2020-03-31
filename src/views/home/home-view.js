@@ -105,89 +105,97 @@ class HomeView extends LitElement {
       </nav>
       <main>
         <div class="main-view">
-          <div class="hall" aria-label="Web design best practices" tabindex="0">
-            <div class="main-container">
-              <h1 class="main-title">WEB DESIGN<br>BEST PRACTICES</h1>
-              <hr class="separator separator-main">
-              <div class="main-icons-container">
-                <i class="material-icons main-icon">sentiment_satisfied_alt</i>
-                <i class="material-icons main-icon">touch_app</i>
-                <i class="material-icons main-icon">favorite_border</i>
+          <section aria-label="Web design best practices" tabindex="0">
+            <div class="hall">
+              <div class="main-container">
+                <h1 class="main-title">WEB DESIGN<br>BEST PRACTICES</h1>
+                <hr class="separator separator-main">
+                <div class="main-icons-container">
+                  <i class="material-icons main-icon">sentiment_satisfied_alt</i>
+                  <i class="material-icons main-icon">touch_app</i>
+                  <i class="material-icons main-icon">favorite_border</i>
+                </div>
+              </div>
+              <div class="column"></div>
+              <div class="column right"></div>
+              <div class="column-bottom"></div>
+            </div>
+          </section>
+          <section aria-label="Web development technologies" tabindex="0">
+            <div class="technologies">
+              <div class="tech-card" aria-label="HTML5" tabindex="0">
+                ${html5_svg}
+                <p class="card-text" tabindex="0">
+                  <span class="card-decorator">HTML5</span> is a software solution stack that defines the properties and behaviors of web page 
+                  content by implementing a <span class="card-decorator">markup-based pattern</span> to it
+                </p>
+                <hr class="separator sm red">
+              </div>
+              <div class="tech-card" aria-label="CSS3" tabindex="0">
+                ${css3_svg}
+                <p class="card-text" tabindex="0">
+                  <span class="card-decorator">Cascading Style Sheets</span> (CSS) is a style sheet language used for describing the presentation 
+                  of a document written in a markup language like HTML
+                </p>
+                <hr class="separator sm blue">
+              </div>
+              <div class="tech-card" aria-label="Javascript" tabindex="0">
+                ${js_svg}
+                <p class="card-text" tabindex="0">
+                  <span class="card-decorator">JavaScript</span>, often abbreviated as JS, is a programming language that conforms to 
+                  the <span class="card-decorator">ECMAScript specification</span>. JavaScript is high-level, often just-in-time compiled, 
+                  and multi-paradigm
+                </p>
+                <hr class="separator sm green">
               </div>
             </div>
-            <div class="column"></div>
-            <div class="column right"></div>
-            <div class="column-bottom"></div>
-          </div>
-          <div class="technologies" aria-label="Technologies section" tabindex="0">
-            <div class="tech-card" aria-label="HTML5" tabindex="0">
-              ${html5_svg}
-              <p class="card-text" tabindex="0">
-                <span class="card-decorator">HTML5</span> is a software solution stack that defines the properties and behaviors of web page 
-                content by implementing a <span class="card-decorator">markup-based pattern</span> to it
-              </p>
-              <hr class="separator sm red">
-            </div>
-            <div class="tech-card" aria-label="CSS3" tabindex="0">
-              ${css3_svg}
-              <p class="card-text" tabindex="0">
-                <span class="card-decorator">Cascading Style Sheets</span> (CSS) is a style sheet language used for describing the presentation 
-                of a document written in a markup language like HTML
-              </p>
-              <hr class="separator sm blue">
-            </div>
-            <div class="tech-card" aria-label="Javascript" tabindex="0">
-              ${js_svg}
-              <p class="card-text" tabindex="0">
-                <span class="card-decorator">JavaScript</span>, often abbreviated as JS, is a programming language that conforms to 
-                the <span class="card-decorator">ECMAScript specification</span>. JavaScript is high-level, often just-in-time compiled, 
-                and multi-paradigm
-              </p>
+          </section>
+          <section aria-label="About dsign project" tabindex="0">
+            <div class="information">
+              <div class="info-header">
+                <h2>Dsign project</h2>
+                <div class="info-icons">
+                  <button type="button"><i class="material-icons favourite-red">favorite_border</i></button>
+                  <button type="button"><i class="material-icons share-purple">share</i></button>
+                </div>
+              </div>
               <hr class="separator sm green">
-            </div>
-          </div>
-          <div class="information" aria-label="About dsign project" tabindex="0">
-            <div class="info-header">
-              <h2>Dsign project</h2>
-              <div class="info-icons">
-                <button type="button"><i class="material-icons favourite-red">favorite_border</i></button>
-                <button type="button"><i class="material-icons share-purple">share</i></button>
-              </div>
-            </div>
-            <hr class="separator sm green">
-            <p class="info-text" tabindex="0">
-                Dsign project includes different responsive web designs following best practices about presentation, 
-                layout and accessibility using HTML5 and CSS3 features. <br><br>Maecenas ac ultricies diam. Maecenas 
-                quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec tristique 
-                ipsum purus sed neque. Donec quis convallis tellus, et fringilla purus. Curabitur condimentum lacus id 
-                massa placerat, ac facilisis quam tempus. Sed id dignissim est.
-              </p>
-              <hr class="separator centered">
-              <a href="https://github.com/vicdata4/dsign" class="github_link" target="_blank">${githubSvg}</a>
-          </div>
-          <div class="areas" aria-label="Web design sections" tabindex="0">
-            <article class="area-card">
-              <h2 class="area-title" tabindex="0">User experience / UX</h2>
               <p class="info-text" tabindex="0">
-                User experience (UX) is a person's emotions and attitudes about using a particular product, system or service. 
-                It includes the practical, experiential, affective, meaningful and valuable aspects of human–computer interaction 
-                and product ownership. <br><br>Additionally, it includes a person's perceptions of system aspects such as utility, ease of use and efficiency. </p>
-            </article>
-            <article class="area-card center">
-              <h2 class="area-title" tabindex="0">Accesibility</h2>
-              <p class="info-text" tabindex="0">Web accessibility is the inclusive practice of ensuring there are no barriers that prevent interaction with, 
-                or access to, websites on the World Wide Web by people with physical disabilities, situational disabilities, and socio-economic 
-                restrictions on bandwidth and speed. <br><br>When sites are correctly designed, developed and edited, generally all users have equal 
-                access to information and functionality.</p>
-            </article>
-            <article class="area-card">
-              <h2 class="area-title" tabindex="0">User interface / UI</h2>
-              <p class="info-text" tabindex="0">The user interface (UI), in the industrial design field of human-computer interaction, is the space where 
-                interactions between humans and machines occur. <br><br>The goal of this interaction is to allow effective operation and control of 
-                the machine from the human end, whilst the machine simultaneously feeds back information that aids the operators' decision-making 
-                process. </p>
-            </article>
-          </div>
+                  Dsign project includes different responsive web designs following best practices about presentation, 
+                  layout and accessibility using HTML5 and CSS3 features. <br><br>Maecenas ac ultricies diam. Maecenas 
+                  quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec tristique 
+                  ipsum purus sed neque. Donec quis convallis tellus, et fringilla purus. Curabitur condimentum lacus id 
+                  massa placerat, ac facilisis quam tempus. Sed id dignissim est.
+                </p>
+                <hr class="separator centered">
+                <a href="https://github.com/vicdata4/dsign" class="github_link" target="_blank">${githubSvg}</a>
+            </div>
+          </section>
+          <section aria-label="Web design disciplines" tabindex="0">
+            <div class="areas">
+              <article class="area-card">
+                <h2 class="area-title" tabindex="0">User experience / UX</h2>
+                <p class="info-text" tabindex="0">
+                  User experience (UX) is a person's emotions and attitudes about using a particular product, system or service. 
+                  It includes the practical, experiential, affective, meaningful and valuable aspects of human–computer interaction 
+                  and product ownership. <br><br>Additionally, it includes a person's perceptions of system aspects such as utility, ease of use and efficiency. </p>
+              </article>
+              <article class="area-card center">
+                <h2 class="area-title" tabindex="0">Accesibility</h2>
+                <p class="info-text" tabindex="0">Web accessibility is the inclusive practice of ensuring there are no barriers that prevent interaction with, 
+                  or access to, websites on the World Wide Web by people with physical disabilities, situational disabilities, and socio-economic 
+                  restrictions on bandwidth and speed. <br><br>When sites are correctly designed, developed and edited, generally all users have equal 
+                  access to information and functionality.</p>
+              </article>
+              <article class="area-card">
+                <h2 class="area-title" tabindex="0">User interface / UI</h2>
+                <p class="info-text" tabindex="0">The user interface (UI), in the industrial design field of human-computer interaction, is the space where 
+                  interactions between humans and machines occur. <br><br>The goal of this interaction is to allow effective operation and control of 
+                  the machine from the human end, whilst the machine simultaneously feeds back information that aids the operators' decision-making 
+                  process. </p>
+              </article>
+            </div>
+          </section>
           <footer aria-label="Footer section" tabindex="0">
             <ul class="footer-list">
               <li class="footer-link title" aria-label="Menu links" tabindex="0">CONTINENTS</li>

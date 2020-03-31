@@ -416,6 +416,7 @@ const mainStyles = css`
         display: flex;
         justify-content: center;
         background-color: rgba(104, 132, 128, 0.97);
+        height: 100%;
     }
 
     .main-title {
