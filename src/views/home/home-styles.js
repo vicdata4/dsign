@@ -416,7 +416,7 @@ const mainStyles = css`
         display: flex;
         justify-content: center;
         background-color: rgba(104, 132, 128, 0.97);
-        height: 100%;
+        height: var(--main-height);
     }
 
     .main-title {
@@ -465,7 +465,6 @@ const mainStyles = css`
             border-left: 1px solid white;
             border-right: 1px solid white;
             padding: 0 120px;
-            /*background-color: rgb(104, 132, 128);*/
         }
 
         .main-icon {
@@ -503,37 +502,18 @@ export const styles = css`
         --nav-height: 50px;
         --header-nav-height: calc(var(--header-height) + var(--nav-height));
         --main-height: calc(100vh - var(--header-nav-height));
-        --section-auto-height: auto;
-        --technologies-height: auto;
-        --information-height: auto;
-        --areas-height: auto;
-        --footer-height: auto;
 
         --nav-background: rgba(0, 0, 0, 0.05);
         --header-background: rgb(50, 50, 50);
-
         --border-grey: #c7c4c4;
 
-        font-family: 'Sen', sans-serif;
         display: grid;
-        position: relative;
-        grid-template-rows:
-        var(--header-height)
-        var(--nav-height)
-        auto;
+        grid-template-rows: var(--header-height) var(--nav-height) auto;
+        font-family: 'Sen', sans-serif;
 
+        position: relative;
         width: 100%;
         height: 100%;
-    }
-    
-    .main-view {
-        display: grid;
-        grid-template-rows:
-        var(--main-height)
-        var(--technologies-height)
-        var(--information-height)
-        var(--areas-height)
-        var(--footer-height);
     }
 
     .separator {
@@ -569,17 +549,18 @@ export const styles = css`
     }
 
     .scrolltop-arrow {
-        width: 50px;
-        height: 50px;
-        background-color: rgba(0,0,0,0.8);
         position: fixed;
         bottom: 0;
         right: 0;
+
+        width: 50px;
+        height: 50px;
         margin: 20px;
-        opacity: 0;
         border: none;
         border-radius: 100%;
         color: white;
+        opacity: 0;
+        background-color: rgba(0,0,0,0.8);
         transition: opacity .6s;
         cursor: pointer;
     }
