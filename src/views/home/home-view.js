@@ -46,12 +46,7 @@ class HomeView extends LitElement {
       const scrollMenu = this.shadowRoot.querySelector('.scroll-menu');
 
       arrowBtn.style.opacity = (window.scrollY > window.innerHeight) ? '1' : '0';
-
-      if (window.scrollY > 170) {
-        scrollMenu.style.top = '0';
-      } else {
-        scrollMenu.style.top = '-70px';
-      }
+      scrollMenu.style.top = (window.scrollY > 170) ? '0' : '-70px';
     })
   }
 
