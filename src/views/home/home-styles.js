@@ -412,9 +412,7 @@ const headerStyles = css`
 `;
 
 const mainStyles = css`
-    main {
-        /*background: url('assets/images/cloud.jpg') no-repeat;
-        background-size: 100%;*/
+    .hall {
         display: flex;
         justify-content: center;
         background-color: rgba(104, 132, 128, 0.97);

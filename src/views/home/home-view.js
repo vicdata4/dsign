@@ -103,7 +103,7 @@ class HomeView extends LitElement {
           <i class="material-icons menu-icon">expand_more</i>
         </button>
       </nav>
-      <main aria-label="Web design best practices" tabindex="0">
+      <div class="hall" aria-label="Web design best practices" tabindex="0">
         <div class="main-container">
           <h1 class="main-title">WEB DESIGN<br>BEST PRACTICES</h1>
           <hr class="separator separator-main">
@@ -116,7 +116,7 @@ class HomeView extends LitElement {
         <div class="column"></div>
         <div class="column right"></div>
         <div class="column-bottom"></div>
-      </main>
+      </div>
       <div class="technologies" aria-label="Technologies section" tabindex="0">
         <div class="tech-card" aria-label="HTML5" tabindex="0">
           ${html5_svg}
