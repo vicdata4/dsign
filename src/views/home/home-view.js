@@ -121,6 +121,7 @@ class HomeView extends LitElement {
           </div>
         </section>
         <section aria-label="Web development technologies" tabindex="0">
+          <h2 class="section-title centered">NATIVE <span class="section-title-decorator">TECHNOLOGIES</span></h2>
           <div class="technologies">
             <div class="tech-card" aria-label="HTML5" tabindex="0">
               ${html5_svg}
@@ -152,7 +153,7 @@ class HomeView extends LitElement {
         <section aria-label="About dsign project" tabindex="0">
           <div class="information">
             <div class="info-header">
-              <h2>Dsign project</h2>
+              <h2 class="section-title">DSIGN</h2>
               <div class="info-icons">
                 <button type="button"><i class="material-icons favourite-red">favorite_border</i></button>
                 <button type="button"><i class="material-icons share-purple">share</i></button>
@@ -160,8 +161,8 @@ class HomeView extends LitElement {
             </div>
             <hr class="separator sm green">
             <p class="info-text" tabindex="0">
-                Dsign project includes different responsive web designs following best practices about presentation, 
-                layout and accessibility using HTML5 and CSS3 features. <br><br>Maecenas ac ultricies diam. Maecenas 
+                This project includes a responsive web layout following best practices about presentation,
+                layout and accessibility using HTML5 and CSS3. <br><br>Maecenas ac ultricies diam. Maecenas 
                 quis lectus magna. Morbi volutpat, felis vel scelerisque imperdiet, nisl mauris tempus lacus, nec tristique 
                 ipsum purus sed neque. Donec quis convallis tellus, et fringilla purus. Curabitur condimentum lacus id 
                 massa placerat, ac facilisis quam tempus. Sed id dignissim est.

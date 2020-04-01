@@ -23,6 +23,8 @@ const areaSectionStyles = css`
     .area-title {
         margin-top: 0;
         color: #2196F3;
+        letter-spacing: 4px;
+        font-weight: 500;
     }
 
     @media (min-width: 540px) {
@@ -62,7 +64,7 @@ const technologiesSectionStyles = css`
         grid-template-columns: 1fr;
         column-gap: 2px;
         row-gap: 2px;
-        padding: 20px 15px 0 15px;
+        padding: 0 15px 0 15px;
     }
 
     .tech-card {
@@ -77,7 +79,7 @@ const technologiesSectionStyles = css`
 
     .card-text {
         text-align: center;
-        font-size: 14px;
+        font-size: 15px;
         letter-spacing: .5px;
         line-height: 21px;
     }
@@ -104,7 +106,7 @@ const technologiesSectionStyles = css`
         }
 
         .technologies {
-            margin: 40px 20px 0 20px;
+            margin: 0 20px 0 20px;
         }
     }
 
@@ -114,7 +116,7 @@ const technologiesSectionStyles = css`
         }
 
         .technologies {
-            margin: 40px 60px 0 60px;
+            margin: 0 60px 0 60px;
         }
 
         .card-text {
@@ -125,12 +127,12 @@ const technologiesSectionStyles = css`
     @media (min-width: 1136px) {
         .technologies {
             grid-template-columns: repeat(3, 1fr);
-            margin: 60px 90px 0 90px;
+            margin: 0 90px 0 90px;
             padding: 0;
         }
 
         .card-text {
-            line-height: 24px;
+            line-height: 28px;
             padding: unset;
         }
     }
@@ -161,11 +163,13 @@ const footerStyles = css`
     .footer-link {
         color: #fff;
         text-decoration: none;
+        letter-spacing: 1px;
     }
 
     .footer-link.title {
         color: #f9ba02;
         margin: 15px 0;
+        font-weight: 400;
     }
 
     .footer-line {
@@ -200,6 +204,7 @@ const footerStyles = css`
 
 const navigatorStyles = css`
     nav {
+        font-family: 'Sen', sans-serif;
         background-color: var(--nav-background);
         letter-spacing: 1.6px;
         font-size: 16px;
@@ -347,6 +352,7 @@ const informationSectionStyles = css`
     .info-text {
         color: #232323;
         font-size: 16px;
+        line-height: 1.5;
     }
 
     .info-header {
@@ -386,7 +392,8 @@ const informationSectionStyles = css`
 
     @media (min-width: 414px) {
         .info-text {
-            font-size: 18px;
+            font-size: 20px;
+            line-height: 1.6;
         }
     }
 
@@ -509,11 +516,29 @@ export const styles = css`
 
         display: grid;
         grid-template-rows: var(--header-height) var(--nav-height) auto;
-        font-family: 'Sen', sans-serif;
+        font-family: 'Open Sans', sans-serif, Arial;
+        letter-spacing: .4px;
+        font-weight: 300;
 
         position: relative;
         width: 100%;
         height: 100%;
+    }
+
+    .section-title{
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: 6px;
+        line-height: 35px;
+    }
+
+    .section-title.centered{
+        text-align: center;
+        margin: 50px 0;
+        padding: 0 30px;
+    }
+
+    .section-title-decorator {
+        color: #339c91;
     }
 
     .separator {
@@ -564,6 +589,13 @@ export const styles = css`
         transition: opacity .6s;
         cursor: pointer;
     }
+
+    @media (min-width: 540px) {
+        .section-title {
+            line-height: unset;
+        }
+    }
+    
 
     ${headerStyles}
     ${navigatorStyles}
