@@ -1,5 +1,6 @@
 import { css } from 'lit-element';
 
+
 const areaSectionStyles = css`
     .areas {
         display: grid;
@@ -10,6 +11,7 @@ const areaSectionStyles = css`
 
         padding: 0 40px;
     }
+
     .area-card {
         min-height: 100px;
         padding: 20px 0;
@@ -24,7 +26,9 @@ const areaSectionStyles = css`
         margin-top: 0;
         color: #2196F3;
         letter-spacing: 4px;
-        font-weight: 500;
+        font-weight: 600;
+        font-family: 'Raleway';
+        font-variant: petite-caps;
     }
 
     @media (min-width: 540px) {
@@ -48,6 +52,10 @@ const areaSectionStyles = css`
 
         .area-card {
             padding: 20px 40px;
+        }
+
+        .area-card > p {
+            font-size: 18px;
         }
 
         .area-card.center {
@@ -82,11 +90,6 @@ const technologiesSectionStyles = css`
         font-size: 15px;
         letter-spacing: .5px;
         line-height: 21px;
-    }
-
-    .card-decorator {
-        color: #066e8e;
-        font-weight: bolder;
     }
 
     .tech-card > svg {
@@ -163,13 +166,14 @@ const footerStyles = css`
     .footer-link {
         color: #fff;
         text-decoration: none;
-        letter-spacing: 1px;
+        letter-spacing: 1.3px;
     }
 
     .footer-link.title {
         color: #f9ba02;
         margin: 15px 0;
         font-weight: 400;
+        font-size: 15px;
     }
 
     .footer-line {
@@ -525,20 +529,24 @@ export const styles = css`
         height: 100%;
     }
 
-    .section-title{
+    .section-title {
         font-family: 'Raleway', sans-serif;
         letter-spacing: 6px;
         line-height: 35px;
     }
 
-    .section-title.centered{
+    .section-title.centered {
         text-align: center;
-        margin: 50px 0;
+        margin: 70px 0;
         padding: 0 30px;
     }
 
     .section-title-decorator {
         color: #339c91;
+    }
+
+    .card-decorator {
+        color: #066e8e;
     }
 
     .separator {
